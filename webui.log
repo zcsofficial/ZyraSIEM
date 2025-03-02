@@ -1,0 +1,75 @@
+2025-03-02 16:30:28,662 - INFO - Starting Flask web UI...
+2025-03-02 16:30:29,644 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.61.68:5001
+2025-03-02 16:30:29,644 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 16:30:29,645 - INFO -  * Restarting with stat
+2025-03-02 16:30:30,138 - INFO - Starting Flask web UI...
+2025-03-02 16:30:30,153 - WARNING -  * Debugger is active!
+2025-03-02 16:30:30,156 - INFO -  * Debugger PIN: 456-355-725
+2025-03-02 16:34:55,524 - INFO -  * Detected change in 'C:\\Users\\adnan\\OneDrive\\Desktop\\ZyraSIEM\\server.py', reloading
+2025-03-02 16:34:55,567 - INFO -  * Restarting with stat
+2025-03-02 16:34:56,070 - INFO - Starting Flask web UI...
+2025-03-02 16:34:56,085 - WARNING -  * Debugger is active!
+2025-03-02 16:34:56,088 - INFO -  * Debugger PIN: 456-355-725
+2025-03-02 16:34:58,101 - INFO -  * Detected change in 'C:\\Users\\adnan\\OneDrive\\Desktop\\ZyraSIEM\\server.py', reloading
+2025-03-02 16:34:58,138 - INFO -  * Restarting with stat
+2025-03-02 16:34:58,709 - INFO - Starting Flask web UI...
+2025-03-02 16:34:58,725 - WARNING -  * Debugger is active!
+2025-03-02 16:34:58,727 - INFO -  * Debugger PIN: 456-355-725
+2025-03-02 16:35:02,747 - INFO -  * Detected change in 'C:\\Users\\adnan\\OneDrive\\Desktop\\ZyraSIEM\\app.py', reloading
+2025-03-02 16:35:02,792 - INFO -  * Restarting with stat
+2025-03-02 16:35:03,750 - INFO - Starting FastAPI web UI with Uvicorn...
+2025-03-02 16:35:12,412 - INFO - Starting FastAPI web UI with Uvicorn...
+2025-03-02 16:35:37,309 - ERROR - Error rendering dashboard: 'dashboard.html' not found in search path: 'templates'
+2025-03-02 17:53:27,016 - INFO - Starting FastAPI web UI with Uvicorn...
+2025-03-02 17:54:02,445 - WARNING - API server returned 500. Some data may be unavailable.
+2025-03-02 17:54:32,519 - WARNING - Failed to fetch logs/system_logs: Status 500
+2025-03-02 17:54:32,534 - WARNING - Failed to fetch logs/registry_changes: Status 500
+2025-03-02 17:54:32,542 - WARNING - Failed to fetch logs/processes: Status 500
+2025-03-02 17:54:32,549 - WARNING - Failed to fetch logs/registry_changes: Status 500
+2025-03-02 17:54:32,557 - WARNING - Failed to fetch logs/network: Status 500
+2025-03-02 17:54:32,564 - WARNING - Failed to fetch logs/processes: Status 500
+2025-03-02 17:54:32,571 - WARNING - Failed to fetch logs/network: Status 500
+2025-03-02 17:54:32,578 - WARNING - Failed to fetch logs/dns_queries: Status 500
+2025-03-02 17:54:33,017 - WARNING - Failed to fetch logs/system_metrics: Status 500
+2025-03-02 17:54:33,027 - WARNING - Failed to fetch logs/system_logs: Status 500
+2025-03-02 17:54:33,038 - WARNING - Failed to fetch alerts: Status 500
+2025-03-02 17:54:33,048 - WARNING - Failed to fetch logs/security_logs: Status 500
+2025-03-02 17:54:33,057 - WARNING - Failed to fetch logs/system_metrics: Status 500
+2025-03-02 17:54:33,064 - WARNING - Failed to fetch alerts: Status 500
+2025-03-02 17:54:33,074 - WARNING - Failed to fetch logs/dns_queries: Status 500
+2025-03-02 17:54:33,085 - WARNING - Failed to fetch logs/security_logs: Status 500
+2025-03-02 17:55:02,633 - WARNING - Failed to fetch devices: Status 500
+2025-03-02 17:55:02,634 - ERROR - Error rendering dashboard: 'dashboard.html' not found in search path: 'templates'
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\app.py", line 136, in dashboard
+    return templates.TemplateResponse(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        "dashboard.html",
+        ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        }
+        ^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\templating.py", line 208, in TemplateResponse
+    template = self.get_template(name)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\templating.py", line 131, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'dashboard.html' not found in search path: 'templates'
+2025-03-02 18:04:07,496 - INFO - Starting FastAPI web UI with Uvicorn...

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyra SIEM - Agents</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
+        .section h1 { margin-top: 0; color: #333; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f8f8f8; }
+        tr:hover { background-color: #f1f1f1; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .nav { margin-bottom: 20px; }
+        .nav a { margin-right: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="/">Dashboard</a>
+            <a href="/agents">Agents</a>
+            <a href="/alerts">Alerts</a>
+        </div>
+        <div class="section">
+            <h1>All Agents</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Agent ID</th>
+                        <th>Hostname</th>
+                        <th>OS</th>
+                        <th>Last Updated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for agent in agents %}
+                    <tr>
+                        <td><a href="/agents/{{ agent.agent_id }}">{{ agent.agent_id }}</a></td>
+                        <td>{{ agent.hostname }}</td>
+                        <td>{{ agent.os }}</td>
+                        <td>{{ agent.last_updated }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+2025-03-02 16:08:37,238 - INFO - Starting FastAPI server...
+2025-03-02 16:09:05,400 - INFO - Fetched 1 devices with query: {}
+2025-03-02 16:11:45,936 - INFO - Starting FastAPI server...
+2025-03-02 16:11:55,461 - INFO - Fetched 1 devices with query: {}
+2025-03-02 16:12:25,700 - INFO - Fetched 1 devices with query: {}
+2025-03-02 16:15:49,156 - INFO - Starting FastAPI server...
+2025-03-02 16:16:00,280 - INFO - Fetched 1 devices with query: {}
+2025-03-02 16:16:14,961 - INFO - Received command result: {}
+2025-03-02 16:16:37,379 - INFO - Fetched 100 network with query: {}
+2025-03-02 16:21:02,300 - INFO - Starting FastAPI server...
+2025-03-02 16:21:41,545 - INFO - Fetched 1 devices with query: {}
+2025-03-02 16:35:34,555 - INFO - Fetched 1 network with query: {}
+2025-03-02 16:35:34,757 - INFO - Fetched 1 processes with query: {}
+2025-03-02 16:35:35,178 - INFO - Fetched 1 system_logs with query: {}
+2025-03-02 16:35:35,424 - INFO - Fetched 1 security_logs with query: {}
+2025-03-02 16:35:35,774 - INFO - Fetched 10 registry_changes with query: {}
+2025-03-02 16:35:36,297 - INFO - Fetched 10 processes with query: {}
+2025-03-02 16:35:36,406 - INFO - Fetched 1 dns_queries with query: {}
+2025-03-02 16:35:36,527 - INFO - Fetched 1 devices with query: {}
+2025-03-02 16:35:36,622 - INFO - Fetched 10 security_logs with query: {}
+2025-03-02 16:35:36,639 - INFO - Fetched 10 alerts with query: {}
+2025-03-02 16:35:36,644 - INFO - Fetched 10 dns_queries with query: {}
+2025-03-02 16:35:36,707 - INFO - Fetched 1 alerts with query: {}
+2025-03-02 16:35:36,712 - INFO - Fetched 10 system_metrics with query: {}
+2025-03-02 16:35:36,731 - INFO - Fetched 10 network with query: {}
+2025-03-02 16:35:36,995 - INFO - Fetched 1 system_metrics with query: {}
+2025-03-02 16:35:37,042 - INFO - Fetched 1 registry_changes with query: {}
+2025-03-02 16:35:37,272 - INFO - Fetched 10 system_logs with query: {}
+2025-03-02 17:55:59,718 - INFO - Starting FastAPI server...
+2025-03-02 17:56:24,388 - INFO - Fetched 1 devices with query: {}
+2025-03-02 17:56:25,188 - INFO - Fetched 1 devices with query: {}
+2025-03-02 17:56:26,753 - INFO - Fetched 1 processes with query: {}
+2025-03-02 17:56:28,116 - INFO - Fetched 1 alerts with query: {}
+2025-03-02 17:56:29,754 - INFO - Fetched 1 system_metrics with query: {}
+2025-03-02 17:56:30,586 - INFO - Fetched 1 system_logs with query: {}
+2025-03-02 17:56:30,922 - INFO - Fetched 10 alerts with query: {}
+2025-03-02 17:56:31,334 - INFO - Fetched 1 registry_changes with query: {}
+2025-03-02 17:56:31,916 - INFO - Fetched 10 system_metrics with query: {}
+2025-03-02 17:56:33,534 - INFO - Fetched 1 network with query: {}
+2025-03-02 17:56:37,578 - INFO - Fetched 1 dns_queries with query: {}
+2025-03-02 17:56:41,267 - INFO - Fetched 10 network with query: {}
+2025-03-02 17:56:49,383 - INFO - Fetched 10 security_logs with query: {}
+2025-03-02 17:56:49,901 - INFO - Fetched 10 processes with query: {}
+2025-03-02 17:56:49,915 - INFO - Fetched 10 system_logs with query: {}
+2025-03-02 17:56:50,172 - INFO - Fetched 10 dns_queries with query: {}
+2025-03-02 17:56:50,324 - INFO - Fetched 1 security_logs with query: {}
+2025-03-02 17:56:51,301 - INFO - Fetched 10 registry_changes with query: {}
+2025-03-02 18:04:13,788 - INFO - Fetched 10 alerts with query: {}
+2025-03-02 18:04:16,230 - INFO - Fetched 1 security_logs with query: {}
+2025-03-02 18:04:17,549 - INFO - Fetched 1 alerts with query: {}
+2025-03-02 18:04:18,997 - INFO - Fetched 1 registry_changes with query: {}
+2025-03-02 18:04:20,738 - INFO - Fetched 1 system_metrics with query: {}
+2025-03-02 18:04:24,899 - INFO - Fetched 1 system_logs with query: {}
+2025-03-02 18:04:25,507 - INFO - Fetched 10 system_logs with query: {}
+2025-03-02 18:04:26,933 - INFO - Fetched 10 system_metrics with query: {}
+2025-03-02 18:04:27,225 - INFO - Fetched 1 network with query: {}
+2025-03-02 18:04:27,730 - INFO - Fetched 10 security_logs with query: {}
+2025-03-02 18:04:28,427 - INFO - Fetched 10 dns_queries with query: {}
+2025-03-02 18:04:29,175 - INFO - Fetched 1 dns_queries with query: {}
+2025-03-02 18:04:29,439 - INFO - Fetched 10 processes with query: {}
+2025-03-02 18:04:29,803 - INFO - Fetched 10 network with query: {}
+2025-03-02 18:04:30,004 - INFO - Fetched 1 processes with query: {}
+2025-03-02 18:04:30,684 - INFO - Fetched 1 devices with query: {}
+2025-03-02 18:04:31,307 - INFO - Fetched 10 registry_changes with query: {}
+2025-03-02 18:05:08,504 - INFO - Fetched 10 alerts with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:09,293 - INFO - Fetched 10 security_logs with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:11,262 - INFO - Fetched 1 devices with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:11,481 - INFO - Fetched 10 network with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:12,580 - INFO - Fetched 10 system_metrics with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:13,128 - INFO - Fetched 10 processes with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:13,916 - INFO - Fetched 10 system_logs with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:14,454 - INFO - Fetched 10 registry_changes with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:14,826 - INFO - Fetched 10 dns_queries with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:33,147 - INFO - Fetched 1 devices with query: {}
+2025-03-02 18:05:36,579 - INFO - Fetched 1 devices with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:48,981 - INFO - Fetched 10 network with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:51,214 - INFO - Fetched 10 security_logs with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:51,313 - INFO - Fetched 10 processes with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:53,454 - INFO - Fetched 10 dns_queries with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:53,637 - INFO - Fetched 10 alerts with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:55,261 - INFO - Fetched 10 system_metrics with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:55,919 - INFO - Fetched 10 registry_changes with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:05:58,369 - INFO - Fetched 10 system_logs with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 18:06:03,733 - INFO - Fetched 50 alerts with query: {}
+2025-03-02 18:06:27,783 - INFO - Fetched 1 alerts with query: {}
+2025-03-02 18:06:28,866 - INFO - Fetched 1 processes with query: {}
+2025-03-02 18:06:30,023 - INFO - Fetched 1 registry_changes with query: {}
+2025-03-02 18:06:41,080 - INFO - Fetched 10 dns_queries with query: {}
+2025-03-02 18:06:43,505 - INFO - Fetched 1 dns_queries with query: {}
+2025-03-02 18:06:43,736 - INFO - Fetched 1 system_logs with query: {}
+2025-03-02 18:06:46,563 - INFO - Fetched 1 devices with query: {}
+2025-03-02 18:06:46,726 - INFO - Fetched 10 registry_changes with query: {}
+2025-03-02 18:06:46,973 - INFO - Fetched 10 alerts with query: {}
+2025-03-02 18:06:51,393 - INFO - Fetched 1 network with query: {}
+2025-03-02 18:06:52,327 - INFO - Fetched 10 system_logs with query: {}
+2025-03-02 18:06:52,790 - INFO - Fetched 10 security_logs with query: {}
+2025-03-02 18:07:01,193 - INFO - Fetched 10 processes with query: {}
+2025-03-02 18:07:02,581 - INFO - Fetched 10 system_metrics with query: {}
+2025-03-02 18:07:04,102 - INFO - Fetched 10 network with query: {}

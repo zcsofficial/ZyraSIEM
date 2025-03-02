@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyra SIEM - Alerts</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
+        .section h1 { margin-top: 0; color: #333; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f8f8f8; }
+        tr:hover { background-color: #f1f1f1; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .nav { margin-bottom: 20px; }
+        .nav a { margin-right: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="/">Dashboard</a>
+            <a href="/agents">Agents</a>
+            <a href="/alerts">Alerts</a>
+        </div>
+        <div class="section">
+            <h1>Alerts {% if agent_id %} for Agent {{ agent_id }}{% endif %}</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Type</th>
+                        <th>Severity</th>
+                        <th>Details</th>
+                        <th>Agent ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for alert in alerts %}
+                    <tr>
+                        <td>{{ alert.timestamp }}</td>
+                        <td>{{ alert.type }}</td>
+                        <td>{{ alert.severity }}</td>
+                        <td>{{ alert.details }}</td>
+                        <td><a href="/agents/{{ alert.agent_id }}">{{ alert.agent_id }}</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
