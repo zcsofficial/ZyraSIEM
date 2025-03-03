@@ -1,75 +1,80 @@
-from fastapi import FastAPI, Query, HTTPException, Depends
-from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware
-from pymongo import MongoClient, DESCENDING, ASCENDING
-from pydantic import BaseModel
-from typing import Optional, List, Dict, Any
-from datetime import datetime
-import logging
-from urllib.parse import quote
 import asyncio
+import logging
+from fastapi import FastAPI, Query, WebSocket, WebSocketDisconnect, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pymongo import MongoClient, DESCENDING, ASCENDING, IndexModel, TEXT
+from pymongo.errors import ConnectionFailure
+from typing import List, Dict, Any, Optional
+from urllib.parse import quote
 import uvicorn
-import json
+from contextlib import asynccontextmanager
 from bson import ObjectId
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 # Setup logging
-logging.basicConfig(
-    filename="server.log",
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    filemode="a"
-)
-logger = logging.getLogger()
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s", filename="server.log")
+logger = logging.getLogger(__name__)
 
-# MongoDB connection with URL-encoded password
+# MongoDB connection
 DB_PASSWORD = "Hacker@66202"
 ENCODED_PASSWORD = quote(DB_PASSWORD)
 MONGO_URI = f"mongodb+srv://zyraadmin:{ENCODED_PASSWORD}@zyrasiemcluster.8ydms.mongodb.net/?retryWrites=true&w=majority&appName=ZyraSiemCluster"
-mongo_client = MongoClient(MONGO_URI)
-db = mongo_client["zyra_siem"]
 
-# FastAPI app with CORS
-app = FastAPI(title="Zyra SIEM Server", version="1.0.0")
+mongo_client = None
+db = None
 
-# CORS configuration
-origins = [
-    "http://localhost",
-    "http://localhost:3000",
-    "https://your-frontend-domain.com",
-    "*"
-]
+# Retry decorator for MongoDB connection
+@retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
+async def connect_to_mongo():
+    global mongo_client, db
+    mongo_client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=20000)
+    mongo_client.admin.command('ping')  # Test connection
+    db = mongo_client["zyra_siem"]
+    return db
 
+# Lifespan handler
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    global mongo_client, db
+    try:
+        await connect_to_mongo()
+        if db is not None:
+            db.logs.create_indexes([
+                IndexModel([("agent_id", ASCENDING), ("timestamp", DESCENDING)]),
+                IndexModel([("system_metrics.cpu_percent", DESCENDING)]),
+                IndexModel([("$**", TEXT)], name="text_index")  # For search
+            ])
+            db.alerts.create_indexes([
+                IndexModel([("agent_id", ASCENDING), ("timestamp", DESCENDING)]),
+                IndexModel([("severity", ASCENDING)])
+            ])
+            db.device_info.create_indexes([
+                IndexModel([("agent_id", ASCENDING), ("last_updated", DESCENDING)], unique=True)
+            ])
+            logger.info("MongoDB connected and indexes created")
+    except ConnectionFailure as e:
+        logger.error(f"MongoDB connection failed: {e}. Running without database.")
+        db = None
+
+    yield
+
+    if mongo_client:
+        mongo_client.close()
+    logger.info("MongoDB connection closed")
+
+# FastAPI app
+app = FastAPI(title="Zyra SIEM Server", version="1.0.0", lifespan=lifespan)
+
+# CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Pydantic models
-class FilterParams(BaseModel):
-    field: str
-    value: Any
-
-class DataResponse(BaseModel):
-    total: int
-    limit: int
-    offset: int
-    data: List[Dict[str, Any]]
-
-# Dependency for parsing filters
-def get_filters(filters: Optional[str] = Query(None, description="Filters as JSON string, e.g., '[{\"field\":\"key\",\"value\":\"val\"}]'")) -> Optional[List[FilterParams]]:
-    if filters:
-        try:
-            filter_list = json.loads(filters)
-            return [FilterParams(**f) for f in filter_list]
-        except Exception as e:
-            logger.error(f"Error parsing filters: {e}")
-            raise HTTPException(status_code=400, detail="Invalid filters format")
-    return None
-
-# Helper function to convert ObjectId to string
+# Helper functions
 def convert_objectid(data: Any) -> Any:
     if isinstance(data, ObjectId):
         return str(data)
@@ -79,338 +84,229 @@ def convert_objectid(data: Any) -> Any:
         return {key: convert_objectid(value) for key, value in data.items()}
     return data
 
-# Helper functions
-def apply_filters(query: Dict, filters: List[FilterParams] = None, agent_id: Optional[str] = None) -> Dict:
-    if agent_id:
-        query["agent_id"] = agent_id
+async def fetch_data(collection, query: Dict, sort: List, limit: int, offset: int) -> Dict:
+    if collection is not None:
+        try:
+            total = await asyncio.to_thread(collection.count_documents, query)
+            data = await asyncio.to_thread(lambda: list(collection.find(query).sort(sort).skip(offset).limit(limit)))
+            return {"total": total, "data": [convert_objectid(d) for d in data], "limit": limit, "offset": offset}
+        except Exception as e:
+            logger.error(f"Error fetching data from MongoDB: {e}")
+    return {"total": 0, "data": [], "limit": limit, "offset": offset}
+
+def apply_filters(query: Dict, search: Optional[str] = None, filters: Dict = None) -> Dict:
+    if search:
+        query["$text"] = {"$search": search}
     if filters:
-        for f in filters:
-            query[f.field] = f.value
+        for key, value in filters.items():
+            if value:  # Only add non-None filters
+                query[key] = value
     return query
 
 def apply_sort(sort_by: str = "timestamp", sort_order: str = "desc") -> List:
     order = DESCENDING if sort_order.lower() == "desc" else ASCENDING
     return [(sort_by, order)]
 
-def apply_search(query: Dict, search: str = None) -> Dict:
-    if search:
-        query["$text"] = {"$search": search}
-    return query
-
-async def fetch_data(collection, query: Dict, sort: List, limit: int, offset: int) -> Dict:
-    try:
-        total = await asyncio.to_thread(collection.count_documents, query)
-        data = await asyncio.to_thread(
-            lambda: list(collection.find(query).sort(sort).skip(offset).limit(limit))
-        )
-        converted_data = convert_objectid(data)
+# API Endpoints
+@app.get("/api/v1/dashboard")
+async def get_dashboard_data():
+    if db is None:
         return {
-            "total": total,
-            "data": converted_data,
-            "limit": limit,
-            "offset": offset
+            "total_agents": 0, "total_logs": 0, "total_alerts": 0,
+            "recent_alerts": []  # Changed to alerts
         }
-    except Exception as e:
-        logger.error(f"Error fetching data: {e}\n{traceback.format_exc()}")
-        raise HTTPException(status_code=500, detail=str(e))
 
-# Generic endpoint handler
-async def get_endpoint_data(
-    collection,
-    endpoint_name: str,
-    search: Optional[str] = None,
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = "timestamp",
-    sort_order: str = "desc",
-    limit: int = 100,
-    offset: int = 0,
-    agent_id: Optional[str] = None
+    tasks = [
+        fetch_data(db.device_info, {}, [("last_updated", DESCENDING)], 1000, 0),
+        fetch_data(db.logs, {}, [("timestamp", DESCENDING)], 1000, 0),
+        fetch_data(db.alerts, {}, [("timestamp", DESCENDING)], 1000, 0)
+    ]
+    agents, logs, alerts = await asyncio.gather(*tasks)
+
+    recent_alerts = []
+    for alert in alerts["data"][:8]:  # Show recent alerts instead of logs
+        severity = alert.get("severity", "low")
+        recent_alerts.append({
+            "timestamp": alert.get("timestamp", "N/A"),
+            "source": alert.get("agent_id", "Unknown"),
+            "event": alert.get("type", "Unknown"),
+            "severity": severity,
+            "status": "Open" if severity in ["high", "critical"] else "Resolved"  # Simple status logic
+        })
+
+    return {
+        "total_agents": agents["total"],
+        "total_logs": logs["total"],
+        "total_alerts": alerts["total"],
+        "recent_alerts": recent_alerts
+    }
+
+@app.get("/api/v1/logs")
+async def get_logs(
+    limit: int = Query(100, ge=1, le=1000),
+    offset: int = Query(0, ge=0),
+    search: Optional[str] = Query(None),
+    sort_by: str = Query("timestamp"),
+    sort_order: str = Query("desc"),
+    severity: Optional[str] = Query(None),
+    source: Optional[str] = Query(None)
 ):
-    query = apply_filters({}, filters, agent_id)
-    query = apply_search(query, search)
+    if db is None:
+        return {"logs": [], "total": 0, "limit": limit, "offset": offset}
+
+    query = {}
+    filters = {"severity": severity, "agent_id": source}
+    query = apply_filters(query, search, filters)
     sort = apply_sort(sort_by, sort_order)
-    result = await fetch_data(collection, query, sort, limit, offset)
-    logger.info(f"Fetched {len(result['data'])} {endpoint_name} with query: {query}")
-    return JSONResponse(content={endpoint_name: result["data"], "total": result["total"], "limit": limit, "offset": offset})
 
-# API Endpoints for all logs
-@app.get("/api/v1/logs/system_metrics")
-async def get_system_metrics(
-    search: Optional[str] = Query(None, description="Search system metrics"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch system metrics logs."""
-    return await get_endpoint_data(db.logs, "system_metrics", search, filters, sort_by, sort_order, limit, offset)
-
-@app.get("/api/v1/logs/dns_queries")
-async def get_dns_queries(
-    search: Optional[str] = Query(None, description="Search DNS queries"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch DNS queries logs."""
-    return await get_endpoint_data(db.logs, "dns_queries", search, filters, sort_by, sort_order, limit, offset)
-
-@app.get("/api/v1/logs/network")
-async def get_network(
-    search: Optional[str] = Query(None, description="Search network logs"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch network logs."""
-    return await get_endpoint_data(db.logs, "network", search, filters, sort_by, sort_order, limit, offset)
-
-@app.get("/api/v1/logs/system_logs")
-async def get_system_logs(
-    search: Optional[str] = Query(None, description="Search system logs"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch system event logs."""
-    return await get_endpoint_data(db.logs, "system_logs", search, filters, sort_by, sort_order, limit, offset)
-
-@app.get("/api/v1/logs/security_logs")
-async def get_security_logs(
-    search: Optional[str] = Query(None, description="Search security logs"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch security event logs."""
-    return await get_endpoint_data(db.logs, "security_logs", search, filters, sort_by, sort_order, limit, offset)
-
-@app.get("/api/v1/logs/processes")
-async def get_processes(
-    search: Optional[str] = Query(None, description="Search processes logs"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch processes logs."""
-    return await get_endpoint_data(db.logs, "processes", search, filters, sort_by, sort_order, limit, offset)
-
-@app.get("/api/v1/logs/registry_changes")
-async def get_registry_changes(
-    search: Optional[str] = Query(None, description="Search registry changes logs"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch registry changes logs."""
-    return await get_endpoint_data(db.logs, "registry_changes", search, filters, sort_by, sort_order, limit, offset)
-
-# New Endpoints for Agent-Specific Data
-@app.get("/api/v1/agents/{agent_id}/logs/system_metrics")
-async def get_agent_system_metrics(
-    agent_id: str,
-    search: Optional[str] = Query(None, description="Search system metrics"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch system metrics logs for a specific agent."""
-    return await get_endpoint_data(db.logs, "system_metrics", search, filters, sort_by, sort_order, limit, offset, agent_id)
-
-@app.get("/api/v1/agents/{agent_id}/logs/dns_queries")
-async def get_agent_dns_queries(
-    agent_id: str,
-    search: Optional[str] = Query(None, description="Search DNS queries"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch DNS queries logs for a specific agent."""
-    return await get_endpoint_data(db.logs, "dns_queries", search, filters, sort_by, sort_order, limit, offset, agent_id)
-
-@app.get("/api/v1/agents/{agent_id}/logs/network")
-async def get_agent_network(
-    agent_id: str,
-    search: Optional[str] = Query(None, description="Search network logs"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch network logs for a specific agent."""
-    return await get_endpoint_data(db.logs, "network", search, filters, sort_by, sort_order, limit, offset, agent_id)
-
-@app.get("/api/v1/agents/{agent_id}/logs/system_logs")
-async def get_agent_system_logs(
-    agent_id: str,
-    search: Optional[str] = Query(None, description="Search system logs"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch system event logs for a specific agent."""
-    return await get_endpoint_data(db.logs, "system_logs", search, filters, sort_by, sort_order, limit, offset, agent_id)
-
-@app.get("/api/v1/agents/{agent_id}/logs/security_logs")
-async def get_agent_security_logs(
-    agent_id: str,
-    search: Optional[str] = Query(None, description="Search security logs"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch security event logs for a specific agent."""
-    return await get_endpoint_data(db.logs, "security_logs", search, filters, sort_by, sort_order, limit, offset, agent_id)
-
-@app.get("/api/v1/agents/{agent_id}/logs/processes")
-async def get_agent_processes(
-    agent_id: str,
-    search: Optional[str] = Query(None, description="Search processes logs"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch processes logs for a specific agent."""
-    return await get_endpoint_data(db.logs, "processes", search, filters, sort_by, sort_order, limit, offset, agent_id)
-
-@app.get("/api/v1/agents/{agent_id}/logs/registry_changes")
-async def get_agent_registry_changes(
-    agent_id: str,
-    search: Optional[str] = Query(None, description="Search registry changes logs"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch registry changes logs for a specific agent."""
-    return await get_endpoint_data(db.logs, "registry_changes", search, filters, sort_by, sort_order, limit, offset, agent_id)
+    result = await fetch_data(db.logs, query, sort, limit, offset)
+    logs = []
+    for log in result["data"]:
+        source = log.get("agent_id", "Unknown")
+        event_type = next((k for k in log.keys() if k not in ["agent_id", "timestamp", "_id"]), "Unknown")
+        severity = "low"
+        if "system_metrics" in log and log["system_metrics"].get("cpu_percent", 0) > 90:
+            severity = "high"
+        logs.append({
+            "timestamp": log.get("timestamp", "N/A"),
+            "source": source,
+            "event": event_type.capitalize().replace("_", " "),
+            "severity": severity,
+            "status": "Open"
+        })
+    return {"logs": logs, "total": result["total"], "limit": limit, "offset": offset}
 
 @app.get("/api/v1/alerts")
 async def get_alerts(
-    search: Optional[str] = Query(None, description="Search alerts"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
     limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
+    offset: int = Query(0, ge=0),
+    search: Optional[str] = Query(None),
+    sort_by: str = Query("timestamp"),
+    sort_order: str = Query("desc"),
+    severity: Optional[str] = Query(None)
 ):
-    """Fetch alerts."""
-    return await get_endpoint_data(db.alerts, "alerts", search, filters, sort_by, sort_order, limit, offset)
+    if db is None:
+        return {"alerts": [], "total": 0, "limit": limit, "offset": offset}
 
-@app.get("/api/v1/agents/{agent_id}/alerts")
-async def get_agent_alerts(
-    agent_id: str,
-    search: Optional[str] = Query(None, description="Search alerts"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("timestamp", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
+    query = {}
+    filters = {"severity": severity}
+    query = apply_filters(query, search, filters)
+    sort = apply_sort(sort_by, sort_order)
+
+    result = await fetch_data(db.alerts, query, sort, limit, offset)
+    alerts = []
+    for alert in result["data"]:
+        severity = alert.get("severity", "low")
+        alerts.append({
+            "timestamp": alert.get("timestamp", "N/A"),
+            "source": alert.get("agent_id", "Unknown"),
+            "event": alert.get("type", "Unknown"),
+            "severity": severity,
+            "status": "Open" if severity in ["high", "critical"] else "Resolved",
+            "details": alert.get("details", "N/A")
+        })
+    return {"alerts": alerts, "total": result["total"], "limit": limit, "offset": offset}
+
+@app.get("/api/v1/agents")
+async def get_agents(
     limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
+    offset: int = Query(0, ge=0),
+    sort_by: str = Query("last_updated"),
+    sort_order: str = Query("desc")
 ):
-    """Fetch alerts for a specific agent."""
-    return await get_endpoint_data(db.alerts, "alerts", search, filters, sort_by, sort_order, limit, offset, agent_id)
+    if db is None:
+        return {"agents": [], "total": 0, "limit": limit, "offset": offset}
 
-@app.get("/api/v1/devices")
-async def get_devices(
-    search: Optional[str] = Query(None, description="Search devices"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("last_updated", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
+    sort = apply_sort(sort_by, sort_order)
+    result = await fetch_data(db.device_info, {}, sort, limit, offset)
+    return {"agents": result["data"], "total": result["total"], "limit": limit, "offset": offset}
+
+@app.get("/api/v1/agent/{agent_id}")
+async def get_agent(agent_id: str):
+    if db is None:
+        return {"agent": {}, "logs": [], "alerts": []}
+
+    tasks = [
+        fetch_data(db.device_info, {"agent_id": agent_id}, [("last_updated", DESCENDING)], 1, 0),
+        fetch_data(db.logs, {"agent_id": agent_id}, [("timestamp", DESCENDING)], 100, 0),
+        fetch_data(db.alerts, {"agent_id": agent_id}, [("timestamp", DESCENDING)], 100, 0)
+    ]
+    device, logs, alerts = await asyncio.gather(*tasks)
+
+    agent_logs = []
+    for log in logs["data"]:
+        source = log.get("agent_id", "Unknown")
+        event_type = next((k for k in log.keys() if k not in ["agent_id", "timestamp", "_id"]), "Unknown")
+        severity = "low"
+        if "system_metrics" in log and log["system_metrics"].get("cpu_percent", 0) > 90:
+            severity = "high"
+        agent_logs.append({
+            "timestamp": log.get("timestamp", "N/A"),
+            "source": source,
+            "event": event_type.capitalize().replace("_", " "),
+            "severity": severity,
+            "status": "Open"
+        })
+
+    agent_alerts = []
+    for alert in alerts["data"]:
+        severity = alert.get("severity", "low")
+        agent_alerts.append({
+            "timestamp": alert.get("timestamp", "N/A"),
+            "source": alert.get("agent_id", "Unknown"),
+            "event": alert.get("type", "Unknown"),
+            "severity": severity,
+            "status": "Open" if severity in ["high", "critical"] else "Resolved",
+            "details": alert.get("details", "N/A")
+        })
+
+    return {
+        "agent": device["data"][0] if device["data"] else {},
+        "logs": agent_logs,
+        "alerts": agent_alerts
+    }
+
+@app.get("/api/v1/malware")
+async def get_malware(
     limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
+    offset: int = Query(0, ge=0),
+    sort_by: str = Query("timestamp"),
+    sort_order: str = Query("desc")
 ):
-    """Fetch devices."""
-    return await get_endpoint_data(db.device_info, "devices", search, filters, sort_by, sort_order, limit, offset)
+    if db is None:
+        return {"malware": [], "total": 0, "limit": limit, "offset": offset}
 
-@app.get("/api/v1/agents/{agent_id}/device")
-async def get_agent_device(
-    agent_id: str,
-    search: Optional[str] = Query(None, description="Search devices"),
-    filters: List[FilterParams] = Depends(get_filters),
-    sort_by: str = Query("last_updated", description="Field to sort by"),
-    sort_order: str = Query("desc", description="Sort order: asc or desc"),
-    limit: int = Query(100, ge=1, le=1000),
-    offset: int = Query(0, ge=0)
-):
-    """Fetch device info for a specific agent."""
-    return await get_endpoint_data(db.device_info, "devices", search, filters, sort_by, sort_order, limit, offset, agent_id)
+    query = {"type": "Malware Detected"}
+    sort = apply_sort(sort_by, sort_order)
+    result = await fetch_data(db.alerts, query, sort, limit, offset)
+    malware = []
+    for alert in result["data"]:
+        severity = alert.get("severity", "low")
+        malware.append({
+            "timestamp": alert.get("timestamp", "N/A"),
+            "source": alert.get("agent_id", "Unknown"),
+            "severity": severity,
+            "details": alert.get("details", "N/A")
+        })
+    return {"malware": malware, "total": result["total"], "limit": limit, "offset": offset}
 
-@app.get("/api/v1/commands", response_model=Dict[str, Any])
-async def get_command():
-    """Send commands to agents."""
-    try:
-        command = {"action": "list_processes"}
-        logger.info("Command requested: list_processes")
-        return JSONResponse(content=command)
-    except Exception as e:
-        logger.error(f"Error in command endpoint: {e}\n{traceback.format_exc()}")
-        raise HTTPException(status_code=500, detail=str(e))
+@app.websocket("/ws/dashboard")
+async def websocket_dashboard(websocket: WebSocket):
+    await websocket.accept()
+    connected = True
+    while connected:
+        try:
+            data = await get_dashboard_data()
+            await websocket.send_json(data)
+            await asyncio.sleep(2)
+        except WebSocketDisconnect:
+            logger.info("WebSocket disconnected")
+            connected = False
+        except Exception as e:
+            logger.error(f"WebSocket error: {e}")
+            connected = False
+    await websocket.close()
 
-@app.post("/api/v1/commands/result", response_model=Dict[str, Any])
-async def receive_command_result(result: Dict[str, Any]):
-    """Receive results from agent commands."""
-    try:
-        logger.info(f"Received command result: {result}")
-        return {"status": "success", "message": "Result received"}
-    except Exception as e:
-        logger.error(f"Error receiving command result: {e}\n{traceback.format_exc()}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/api/v1/analytics", response_model=Dict[str, Any])
-async def get_analytics():
-    """Fetch analytics (e.g., alert counts by severity)."""
-    try:
-        pipeline = [
-            {"$group": {"_id": "$severity", "count": {"$sum": 1}}},
-            {"$sort": {"count": -1}}
-        ]
-        analytics = await asyncio.to_thread(lambda: list(db.alerts.aggregate(pipeline)))
-        converted_analytics = convert_objectid(analytics)
-        result = {"analytics": converted_analytics}
-        logger.info(f"Fetched analytics: {result}")
-        return JSONResponse(content=result)
-    except Exception as e:
-        logger.error(f"Error fetching analytics: {e}\n{traceback.format_exc()}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/api/v1/get_vt_api_key", response_model=Dict[str, str])
-async def get_vt_api_key():
-    """Provide VirusTotal API key to agents."""
-    try:
-        vt_api_key = "your_virustotal_api_key_here"  # Replace with your actual key
-        logger.info("VirusTotal API key requested")
-        return {"api_key": vt_api_key}
-    except Exception as e:
-        logger.error(f"Error providing VT API key: {e}\n{traceback.format_exc()}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-# Run the server
 if __name__ == "__main__":
     logger.info("Starting FastAPI server...")
-    print("Starting FastAPI server...")
     uvicorn.run(app, host="0.0.0.0", port=5000, log_level="info")

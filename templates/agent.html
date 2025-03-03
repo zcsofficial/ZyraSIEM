@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zyra SIEM Logs</title>
+    <title>Zyra SIEM Agent {{ agent_id }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
     <script>tailwind.config = { theme: { extend: { colors: { primary: '#6B46C1', secondary: '#E9D8FD' } } } }</script>
@@ -23,42 +23,22 @@
             <div class="space-y-2">
                 <a href="/" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-dashboard-line mr-3"></i> Dashboard</a>
                 <a href="/alerts" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-alarm-warning-line mr-3"></i> Alerts</a>
-                <a href="/logs" class="flex items-center px-4 py-2 text-primary bg-secondary rounded"><i class="ri-file-list-line mr-3"></i> Logs</a>
-                <a href="/agents" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-computer-line mr-3"></i> Agents</a>
+                <a href="/logs" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-file-list-line mr-3"></i> Logs</a>
+                <a href="/agents" class="flex items-center px-4 py-2 text-primary bg-secondary rounded"><i class="ri-computer-line mr-3"></i> Agents</a>
                 <a href="/malware" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-virus-line mr-3"></i> Malware Analysis</a>
             </div>
         </nav>
         <main class="flex-1 p-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-6">Logs</h2>
-            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
-                <form class="mb-4">
-                    <div class="flex space-x-4">
-                        <input type="text" name="search" placeholder="Search logs..." class="px-4 py-2 border rounded w-1/3">
-                        <select name="severity" class="px-4 py-2 border rounded">
-                            <option value="">All Severities</option>
-                            <option value="critical">Critical</option>
-                            <option value="high">High</option>
-                            <option value="medium">Medium</option>
-                            <option value="low">Low</option>
-                        </select>
-                        <select name="source" class="px-4 py-2 border rounded">
-                            <option value="">All Sources</option>
-                            {% for log in data.logs %}
-                            <option value="{{ log.source }}">{{ log.source }}</option>
-                            {% endfor %}
-                        </select>
-                        <select name="sort_by" class="px-4 py-2 border rounded">
-                            <option value="timestamp">Timestamp</option>
-                            <option value="severity">Severity</option>
-                            <option value="source">Source</option>
-                        </select>
-                        <select name="sort_order" class="px-4 py-2 border rounded">
-                            <option value="desc">Descending</option>
-                            <option value="asc">Ascending</option>
-                        </select>
-                        <button type="submit" class="px-4 py-2 bg-primary text-white rounded">Filter</button>
-                    </div>
-                </form>
+            <h2 class="text-xl font-semibold text-gray-800 mb-6">Agent {{ agent_id }}</h2>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Agent Details</h3>
+                <p><strong>ID:</strong> {{ data.agent.agent_id|default('N/A') }}</p>
+                <p><strong>Hostname:</strong> {{ data.agent.hostname|default('N/A') }}</p>
+                <p><strong>OS:</strong> {{ data.agent.os|default('N/A') }}</p>
+                <p><strong>Last Updated:</strong> {{ data.agent.last_updated|default('N/A') }}</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Recent Logs</h3>
                 <table class="w-full">
                     <thead>
                         <tr class="text-left text-sm text-gray-500 border-b border-gray-200">
@@ -83,10 +63,31 @@
                         {% endfor %}
                     </tbody>
                 </table>
-                <div class="mt-4 flex justify-between">
-                    <a href="/logs?limit={{ data.limit }}&offset={{ data.offset - data.limit }}" class="px-4 py-2 text-sm text-primary hover:bg-primary/5 rounded {% if data.offset <= 0 %}opacity-50 pointer-events-none{% endif %}">Previous</a>
-                    <a href="/logs?limit={{ data.limit }}&offset={{ data.offset + data.limit }}" class="px-4 py-2 text-sm text-primary hover:bg-primary/5 rounded {% if data.offset + data.limit >= data.total %}opacity-50 pointer-events-none{% endif %}">Next</a>
-                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Alerts</h3>
+                <table class="w-full">
+                    <thead>
+                        <tr class="text-left text-sm text-gray-500 border-b border-gray-200">
+                            <th class="pb-3 font-medium">Timestamp</th>
+                            <th class="pb-3 font-medium">Type</th>
+                            <th class="pb-3 font-medium">Severity</th>
+                            <th class="pb-3 font-medium">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for alert in data.alerts %}
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 text-sm text-gray-600">{{ alert.timestamp|default('N/A') }}</td>
+                            <td class="py-3 text-sm text-gray-600">{{ alert.type|default('N/A') }}</td>
+                            <td class="py-3"><span class="px-2 py-1 text-xs font-medium rounded severity-{{ alert.severity|lower|default('low') }}">{{ alert.severity|default('Low') }}</span></td>
+                            <td class="py-3 text-sm text-gray-600">{{ alert.details|default('N/A') }}</td>
+                        </tr>
+                        {% else %}
+                        <tr><td colspan="4" class="py-3 text-sm text-gray-600">No alerts available</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </main>
     </div>

@@ -3,54 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zyra SIEM - Alerts</title>
+    <title>Zyra SIEM Alerts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#6B46C1', secondary: '#E9D8FD' } } } }</script>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .section { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
-        .section h1 { margin-top: 0; color: #333; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background-color: #f8f8f8; }
-        tr:hover { background-color: #f1f1f1; }
-        a { color: #007bff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .nav { margin-bottom: 20px; }
-        .nav a { margin-right: 20px; }
+        .severity-critical { background-color: rgba(239, 68, 68, 0.1); color: rgb(239, 68, 68); }
+        .severity-high { background-color: rgba(249, 115, 22, 0.1); color: rgb(249, 115, 22); }
+        .severity-medium { background-color: rgba(234, 179, 8, 0.1); color: rgb(234, 179, 8); }
+        .severity-low { background-color: rgba(59, 130, 246, 0.1); color: rgb(59, 130, 246); }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="nav">
-            <a href="/">Dashboard</a>
-            <a href="/agents">Agents</a>
-            <a href="/alerts">Alerts</a>
-        </div>
-        <div class="section">
-            <h1>Alerts {% if agent_id %} for Agent {{ agent_id }}{% endif %}</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Timestamp</th>
-                        <th>Type</th>
-                        <th>Severity</th>
-                        <th>Details</th>
-                        <th>Agent ID</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for alert in alerts %}
-                    <tr>
-                        <td>{{ alert.timestamp }}</td>
-                        <td>{{ alert.type }}</td>
-                        <td>{{ alert.severity }}</td>
-                        <td>{{ alert.details }}</td>
-                        <td><a href="/agents/{{ alert.agent_id }}">{{ alert.agent_id }}</a></td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+<body class="bg-white">
+    <div class="flex h-screen">
+        <nav class="w-64 bg-white border-r border-gray-200 p-4">
+            <div class="mb-8">
+                <h1 class="text-2xl font-['Pacifico'] text-primary">Zyra SIEM</h1>
+            </div>
+            <div class="space-y-2">
+                <a href="/" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-dashboard-line mr-3"></i> Dashboard</a>
+                <a href="/alerts" class="flex items-center px-4 py-2 text-primary bg-secondary rounded"><i class="ri-alarm-warning-line mr-3"></i> Alerts</a>
+                <a href="/logs" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-file-list-line mr-3"></i> Logs</a>
+                <a href="/agents" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-computer-line mr-3"></i> Agents</a>
+                <a href="/malware" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-virus-line mr-3"></i> Malware Analysis</a>
+            </div>
+        </nav>
+        <main class="flex-1 p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-6">Alerts</h2>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+                <form class="mb-4">
+                    <div class="flex space-x-4">
+                        <input type="text" name="search" placeholder="Search alerts..." class="px-4 py-2 border rounded w-1/3">
+                        <select name="severity" class="px-4 py-2 border rounded">
+                            <option value="">All Severities</option>
+                            <option value="critical">Critical</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                        <select name="sort_by" class="px-4 py-2 border rounded">
+                            <option value="timestamp">Timestamp</option>
+                            <option value="severity">Severity</option>
+                        </select>
+                        <select name="sort_order" class="px-4 py-2 border rounded">
+                            <option value="desc">Descending</option>
+                            <option value="asc">Ascending</option>
+                        </select>
+                        <button type="submit" class="px-4 py-2 bg-primary text-white rounded">Filter</button>
+                    </div>
+                </form>
+                <table class="w-full">
+                    <thead>
+                        <tr class="text-left text-sm text-gray-500 border-b border-gray-200">
+                            <th class="pb-3 font-medium">Timestamp</th>
+                            <th class="pb-3 font-medium">Source</th>
+                            <th class="pb-3 font-medium">Event Type</th>
+                            <th class="pb-3 font-medium">Severity</th>
+                            <th class="pb-3 font-medium">Status</th>
+                            <th class="pb-3 font-medium">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for alert in data.alerts %}
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 text-sm text-gray-600">{{ alert.timestamp }}</td>
+                            <td class="py-3 text-sm text-gray-600">{{ alert.source }}</td>
+                            <td class="py-3 text-sm text-gray-600">{{ alert.event }}</td>
+                            <td class="py-3"><span class="px-2 py-1 text-xs font-medium rounded severity-{{ alert.severity|lower }}">{{ alert.severity }}</span></td>
+                            <td class="py-3 text-sm text-gray-600">{{ alert.status }}</td>
+                            <td class="py-3 text-sm text-gray-600">{{ alert.details }}</td>
+                        </tr>
+                        {% else %}
+                        <tr><td colspan="6" class="py-3 text-sm text-gray-600">No alerts available</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="mt-4 flex justify-between">
+                    <a href="/alerts?limit={{ data.limit }}&offset={{ data.offset - data.limit }}" class="px-4 py-2 text-sm text-primary hover:bg-primary/5 rounded {% if data.offset <= 0 %}opacity-50 pointer-events-none{% endif %}">Previous</a>
+                    <a href="/alerts?limit={{ data.limit }}&offset={{ data.offset + data.limit }}" class="px-4 py-2 text-sm text-primary hover:bg-primary/5 rounded {% if data.offset + data.limit >= data.total %}opacity-50 pointer-events-none{% endif %}">Next</a>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 </html>

@@ -3,52 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zyra SIEM - Agents</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .section { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
-        .section h1 { margin-top: 0; color: #333; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background-color: #f8f8f8; }
-        tr:hover { background-color: #f1f1f1; }
-        a { color: #007bff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .nav { margin-bottom: 20px; }
-        .nav a { margin-right: 20px; }
-    </style>
+    <title>Zyra SIEM Agents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#6B46C1', secondary: '#E9D8FD' } } } }</script>
 </head>
-<body>
-    <div class="container">
-        <div class="nav">
-            <a href="/">Dashboard</a>
-            <a href="/agents">Agents</a>
-            <a href="/alerts">Alerts</a>
-        </div>
-        <div class="section">
-            <h1>All Agents</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Agent ID</th>
-                        <th>Hostname</th>
-                        <th>OS</th>
-                        <th>Last Updated</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for agent in agents %}
-                    <tr>
-                        <td><a href="/agents/{{ agent.agent_id }}">{{ agent.agent_id }}</a></td>
-                        <td>{{ agent.hostname }}</td>
-                        <td>{{ agent.os }}</td>
-                        <td>{{ agent.last_updated }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+<body class="bg-white">
+    <div class="flex h-screen">
+        <nav class="w-64 bg-white border-r border-gray-200 p-4">
+            <div class="mb-8">
+                <h1 class="text-2xl font-['Pacifico'] text-primary">Zyra SIEM</h1>
+            </div>
+            <div class="space-y-2">
+                <a href="/" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-dashboard-line mr-3"></i> Dashboard</a>
+                <a href="/alerts" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-alarm-warning-line mr-3"></i> Alerts</a>
+                <a href="/logs" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-file-list-line mr-3"></i> Logs</a>
+                <a href="/agents" class="flex items-center px-4 py-2 text-primary bg-secondary rounded"><i class="ri-computer-line mr-3"></i> Agents</a>
+                <a href="/malware" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-virus-line mr-3"></i> Malware Analysis</a>
+            </div>
+        </nav>
+        <main class="flex-1 p-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-6">Agents</h2>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+                <form class="mb-4">
+                    <div class="flex space-x-4">
+                        <select name="sort_by" class="px-4 py-2 border rounded">
+                            <option value="last_updated">Last Updated</option>
+                            <option value="agent_id">Agent ID</option>
+                        </select>
+                        <select name="sort_order" class="px-4 py-2 border rounded">
+                            <option value="desc">Descending</option>
+                            <option value="asc">Ascending</option>
+                        </select>
+                        <button type="submit" class="px-4 py-2 bg-primary text-white rounded">Sort</button>
+                    </div>
+                </form>
+                <table class="w-full">
+                    <thead>
+                        <tr class="text-left text-sm text-gray-500 border-b border-gray-200">
+                            <th class="pb-3 font-medium">Agent ID</th>
+                            <th class="pb-3 font-medium">Hostname</th>
+                            <th class="pb-3 font-medium">OS</th>
+                            <th class="pb-3 font-medium">Last Updated</th>
+                            <th class="pb-3 font-medium">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for agent in data.agents %}
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 text-sm text-gray-600">{{ agent.agent_id|default('N/A') }}</td>
+                            <td class="py-3 text-sm text-gray-600">{{ agent.hostname|default('N/A') }}</td>
+                            <td class="py-3 text-sm text-gray-600">{{ agent.os|default('N/A') }}</td>
+                            <td class="py-3 text-sm text-gray-600">{{ agent.last_updated|default('N/A') }}</td>
+                            <td class="py-3 text-sm text-gray-600"><a href="/agent/{{ agent.agent_id }}" class="text-primary">View</a></td>
+                        </tr>
+                        {% else %}
+                        <tr><td colspan="5" class="py-3 text-sm text-gray-600">No agents available</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="mt-4 flex justify-between">
+                    <a href="/agents?limit={{ data.limit }}&offset={{ data.offset - data.limit }}" class="px-4 py-2 text-sm text-primary hover:bg-primary/5 rounded {% if data.offset <= 0 %}opacity-50 pointer-events-none{% endif %}">Previous</a>
+                    <a href="/agents?limit={{ data.limit }}&offset={{ data.offset + data.limit }}" class="px-4 py-2 text-sm text-primary hover:bg-primary/5 rounded {% if data.offset + data.limit >= data.total %}opacity-50 pointer-events-none{% endif %}">Next</a>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 </html>

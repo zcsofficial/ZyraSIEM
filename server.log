@@ -97,3 +97,3038 @@
 2025-03-02 18:07:01,193 - INFO - Fetched 10 processes with query: {}
 2025-03-02 18:07:02,581 - INFO - Fetched 10 system_metrics with query: {}
 2025-03-02 18:07:04,102 - INFO - Fetched 10 network with query: {}
+2025-03-02 18:07:08,653 - INFO - Fetched 1 system_metrics with query: {}
+2025-03-02 18:07:08,693 - INFO - Fetched 1 security_logs with query: {}
+2025-03-02 21:18:23,813 - INFO - Fetched 10 alerts with query: {}
+2025-03-02 21:18:23,919 - INFO - Fetched 1 alerts with query: {}
+2025-03-02 21:18:24,193 - INFO - Fetched 1 system_metrics with query: {}
+2025-03-02 21:18:24,394 - INFO - Fetched 10 system_logs with query: {}
+2025-03-02 21:18:24,559 - INFO - Fetched 1 registry_changes with query: {}
+2025-03-02 21:18:24,601 - INFO - Fetched 1 system_logs with query: {}
+2025-03-02 21:18:24,740 - INFO - Fetched 1 security_logs with query: {}
+2025-03-02 21:18:24,864 - INFO - Fetched 1 processes with query: {}
+2025-03-02 21:18:25,098 - INFO - Fetched 10 security_logs with query: {}
+2025-03-02 21:18:25,106 - INFO - Fetched 1 devices with query: {}
+2025-03-02 21:18:25,202 - INFO - Fetched 1 network with query: {}
+2025-03-02 21:18:25,217 - INFO - Fetched 1 dns_queries with query: {}
+2025-03-02 21:18:25,468 - INFO - Fetched 10 system_metrics with query: {}
+2025-03-02 21:18:25,522 - INFO - Fetched 10 processes with query: {}
+2025-03-02 21:18:25,545 - INFO - Fetched 10 registry_changes with query: {}
+2025-03-02 21:18:26,753 - INFO - Fetched 10 dns_queries with query: {}
+2025-03-02 21:18:27,125 - INFO - Fetched 10 network with query: {}
+2025-03-02 21:21:38,542 - INFO - Fetched 10 alerts with query: {}
+2025-03-02 21:21:38,752 - INFO - Fetched 1 system_metrics with query: {}
+2025-03-02 21:21:38,824 - INFO - Fetched 1 security_logs with query: {}
+2025-03-02 21:21:39,787 - INFO - Fetched 1 network with query: {}
+2025-03-02 21:21:39,818 - INFO - Fetched 10 dns_queries with query: {}
+2025-03-02 21:21:39,832 - INFO - Fetched 10 security_logs with query: {}
+2025-03-02 21:21:40,034 - INFO - Fetched 1 system_logs with query: {}
+2025-03-02 21:21:40,106 - INFO - Fetched 1 alerts with query: {}
+2025-03-02 21:21:40,180 - INFO - Fetched 1 dns_queries with query: {}
+2025-03-02 21:21:40,530 - INFO - Fetched 1 devices with query: {}
+2025-03-02 21:21:40,542 - INFO - Fetched 1 processes with query: {}
+2025-03-02 21:21:40,818 - INFO - Fetched 10 system_logs with query: {}
+2025-03-02 21:21:40,957 - INFO - Fetched 10 registry_changes with query: {}
+2025-03-02 21:21:41,024 - INFO - Fetched 10 system_metrics with query: {}
+2025-03-02 21:21:41,229 - INFO - Fetched 10 processes with query: {}
+2025-03-02 21:21:41,357 - INFO - Fetched 1 registry_changes with query: {}
+2025-03-02 21:21:41,895 - INFO - Fetched 10 network with query: {}
+2025-03-02 21:24:02,977 - INFO - Fetched 1 dns_queries with query: {}
+2025-03-02 21:24:03,012 - INFO - Fetched 1 processes with query: {}
+2025-03-02 21:24:03,019 - INFO - Fetched 1 network with query: {}
+2025-03-02 21:24:03,105 - INFO - Fetched 1 registry_changes with query: {}
+2025-03-02 21:24:03,285 - INFO - Fetched 1 system_logs with query: {}
+2025-03-02 21:24:03,300 - INFO - Fetched 1 alerts with query: {}
+2025-03-02 21:24:03,343 - INFO - Fetched 10 alerts with query: {}
+2025-03-02 21:24:03,450 - INFO - Fetched 10 registry_changes with query: {}
+2025-03-02 21:24:03,462 - INFO - Fetched 1 devices with query: {}
+2025-03-02 21:24:03,534 - INFO - Fetched 10 processes with query: {}
+2025-03-02 21:24:03,548 - INFO - Fetched 1 security_logs with query: {}
+2025-03-02 21:24:03,550 - INFO - Fetched 1 system_metrics with query: {}
+2025-03-02 21:24:03,653 - INFO - Fetched 10 dns_queries with query: {}
+2025-03-02 21:24:03,937 - INFO - Fetched 10 network with query: {}
+2025-03-02 21:24:03,959 - INFO - Fetched 10 security_logs with query: {}
+2025-03-02 21:24:04,571 - INFO - Fetched 10 system_logs with query: {}
+2025-03-02 21:24:04,679 - INFO - Fetched 10 system_metrics with query: {}
+2025-03-02 21:24:25,392 - INFO - Fetched 1 devices with query: {}
+2025-03-02 21:24:28,311 - INFO - Fetched 10 alerts with query: {}
+2025-03-02 21:24:28,618 - INFO - Fetched 10 system_metrics with query: {}
+2025-03-02 21:24:28,960 - INFO - Fetched 10 processes with query: {}
+2025-03-02 21:24:29,092 - INFO - Fetched 10 registry_changes with query: {}
+2025-03-02 21:24:29,113 - INFO - Fetched 10 network with query: {}
+2025-03-02 21:24:29,128 - INFO - Fetched 10 system_logs with query: {}
+2025-03-02 21:24:29,144 - INFO - Fetched 10 dns_queries with query: {}
+2025-03-02 21:24:29,462 - INFO - Fetched 10 security_logs with query: {}
+2025-03-02 21:25:17,634 - INFO - Fetched 10 alerts with query: {}
+2025-03-02 21:25:17,806 - INFO - Fetched 1 processes with query: {}
+2025-03-02 21:25:17,847 - INFO - Fetched 1 dns_queries with query: {}
+2025-03-02 21:25:18,135 - INFO - Fetched 1 system_metrics with query: {}
+2025-03-02 21:25:18,234 - INFO - Fetched 10 dns_queries with query: {}
+2025-03-02 21:25:18,658 - INFO - Fetched 10 processes with query: {}
+2025-03-02 21:25:18,830 - INFO - Fetched 10 system_logs with query: {}
+2025-03-02 21:25:18,997 - INFO - Fetched 1 network with query: {}
+2025-03-02 21:25:19,395 - INFO - Fetched 10 network with query: {}
+2025-03-02 21:25:38,558 - INFO - Fetched 1 security_logs with query: {}
+2025-03-02 21:25:38,569 - INFO - Fetched 1 registry_changes with query: {}
+2025-03-02 21:25:39,646 - INFO - Fetched 10 system_metrics with query: {}
+2025-03-02 21:25:39,942 - INFO - Fetched 10 registry_changes with query: {}
+2025-03-02 21:25:41,732 - INFO - Fetched 10 security_logs with query: {}
+2025-03-02 21:25:43,448 - INFO - Fetched 1 system_logs with query: {}
+2025-03-02 22:03:27,091 - INFO - Starting FastAPI server...
+2025-03-02 22:03:34,504 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:23:57,755 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:24:08,309 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:24:18,771 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:24:28,760 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:24:38,977 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:24:49,356 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:24:59,367 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:25:10,595 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:25:20,601 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:25:30,614 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:25:40,614 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:25:50,628 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:26:00,636 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:26:11,324 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:26:21,340 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:26:31,341 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:26:41,347 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:26:51,346 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:27:01,349 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:27:11,366 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:27:21,910 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:27:31,919 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:27:41,931 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:27:51,943 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:28:01,949 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:28:11,948 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:28:21,968 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:28:31,963 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:28:41,965 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:28:51,978 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:29:01,991 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:29:11,991 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:29:22,006 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:29:32,014 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:29:42,023 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:29:52,029 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:30:02,042 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:30:12,050 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:30:22,055 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:30:32,057 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:30:42,070 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:30:52,083 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:31:02,094 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:31:12,121 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:31:22,123 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:31:32,741 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+    async with aiohttp.ClientSession() as session:
+               ^^^^^^^
+NameError: name 'aiohttp' is not defined
+2025-03-02 22:31:42,740 - ERROR - Error fetching dashboard data: name 'aiohttp' is not defined
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 432, in get_dashboard_data
+NameError: name 'aiohttp' is not defined
+2025-03-02 23:02:34,406 - INFO - Starting FastAPI server...
+2025-03-02 23:02:38,635 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-02 23:02:49,548 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-02 23:03:06,001 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-02 23:03:22,526 - INFO - Fetched 1 devices with query: {}
+2025-03-02 23:03:22,746 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-02 23:03:22,977 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-02 23:03:24,955 - ERROR - Error fetching data: zyrasiemcluster-shard-00-02.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1265, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 862, in _configured_socket
+    sock = _create_connection(address, options)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 846, in _create_connection
+    raise err
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 839, in _create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 102, in fetch_data
+    total = await asyncio.to_thread(collection.count_documents, query)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2154, in count_documents
+    return self._retryable_non_cursor_read(_cmd, session, _Op.COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2168, in _retryable_non_cursor_read
+    return client._retryable_read(func, self._read_preference_for(s), s, operation)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1861, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1828, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2565, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2702, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1681, in _conn_from_server
+    with self._checkout(server, session) as conn:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1591, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1346, in checkout
+    conn = self._get_conn(checkout_started_time, handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1507, in _get_conn
+    conn = self.connect(handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1287, in connect
+    _raise_connection_failure(self.address, error, timeout_details=details)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 203, in _raise_connection_failure
+    raise NetworkTimeout(msg) from error
+pymongo.errors.NetworkTimeout: zyrasiemcluster-shard-00-02.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+2025-03-02 23:03:25,046 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-02 23:03:47,512 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-02 23:03:48,354 - INFO - Fetched 10 registry_changes with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 23:03:48,436 - INFO - Fetched 1 devices with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 23:03:49,080 - INFO - Fetched 10 registry_changes with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 23:03:49,444 - INFO - Fetched 10 registry_changes with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 23:03:49,842 - INFO - Fetched 10 registry_changes with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 23:03:49,966 - INFO - Fetched 10 alerts with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 23:03:49,983 - INFO - Fetched 10 registry_changes with query: {'agent_id': 'cbfe23ee-1591-46db-ad4a-773a5a9d1eb7'}
+2025-03-02 23:03:50,078 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:03:01,318 - INFO - Starting FastAPI server...
+2025-03-03 22:03:48,638 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:04:15,361 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:04:44,674 - INFO - Fetched 50 alerts with query: {}
+2025-03-03 22:04:45,772 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:04:54,219 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:04:59,752 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:05:24,395 - ERROR - Error fetching data: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1265, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 862, in _configured_socket
+    sock = _create_connection(address, options)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 846, in _create_connection
+    raise err
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 839, in _create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 102, in fetch_data
+    total = await asyncio.to_thread(collection.count_documents, query)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2154, in count_documents
+    return self._retryable_non_cursor_read(_cmd, session, _Op.COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2168, in _retryable_non_cursor_read
+    return client._retryable_read(func, self._read_preference_for(s), s, operation)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1861, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1828, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2565, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2702, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1681, in _conn_from_server
+    with self._checkout(server, session) as conn:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1591, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1346, in checkout
+    conn = self._get_conn(checkout_started_time, handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1507, in _get_conn
+    conn = self.connect(handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1287, in connect
+    _raise_connection_failure(self.address, error, timeout_details=details)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 203, in _raise_connection_failure
+    raise NetworkTimeout(msg) from error
+pymongo.errors.NetworkTimeout: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+2025-03-03 22:05:24,463 - ERROR - Error fetching data: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1265, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 862, in _configured_socket
+    sock = _create_connection(address, options)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 846, in _create_connection
+    raise err
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 839, in _create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 102, in fetch_data
+    total = await asyncio.to_thread(collection.count_documents, query)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2154, in count_documents
+    return self._retryable_non_cursor_read(_cmd, session, _Op.COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2168, in _retryable_non_cursor_read
+    return client._retryable_read(func, self._read_preference_for(s), s, operation)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1861, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1828, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2565, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2702, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1681, in _conn_from_server
+    with self._checkout(server, session) as conn:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1591, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1346, in checkout
+    conn = self._get_conn(checkout_started_time, handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1507, in _get_conn
+    conn = self.connect(handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1287, in connect
+    _raise_connection_failure(self.address, error, timeout_details=details)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 203, in _raise_connection_failure
+    raise NetworkTimeout(msg) from error
+pymongo.errors.NetworkTimeout: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+2025-03-03 22:05:24,471 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:05:24,496 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:05:35,013 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:05:48,499 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:05:49,281 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:05:57,624 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:06:06,044 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:06:19,589 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:06:27,961 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:06:36,780 - ERROR - Error fetching data: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1265, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 862, in _configured_socket
+    sock = _create_connection(address, options)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 846, in _create_connection
+    raise err
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 839, in _create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 103, in fetch_data
+    data = await asyncio.to_thread(lambda: list(collection.find(query).sort(sort).skip(offset).limit(limit)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 103, in <lambda>
+    data = await asyncio.to_thread(lambda: list(collection.find(query).sort(sort).skip(offset).limit(limit)))
+                                           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1752, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1861, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1828, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2565, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2702, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1681, in _conn_from_server
+    with self._checkout(server, session) as conn:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1591, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1346, in checkout
+    conn = self._get_conn(checkout_started_time, handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1507, in _get_conn
+    conn = self.connect(handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1287, in connect
+    _raise_connection_failure(self.address, error, timeout_details=details)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 203, in _raise_connection_failure
+    raise NetworkTimeout(msg) from error
+pymongo.errors.NetworkTimeout: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+2025-03-03 22:06:36,792 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:06:47,803 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:06:54,773 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:07:16,904 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:07:25,339 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:07:36,281 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:07:38,179 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:07:44,117 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:07:48,050 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:07:56,731 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:08:26,685 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:08:27,989 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:08:37,918 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:08:53,792 - ERROR - Error fetching data: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1265, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 862, in _configured_socket
+    sock = _create_connection(address, options)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 846, in _create_connection
+    raise err
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 839, in _create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 102, in fetch_data
+    total = await asyncio.to_thread(collection.count_documents, query)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2154, in count_documents
+    return self._retryable_non_cursor_read(_cmd, session, _Op.COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2168, in _retryable_non_cursor_read
+    return client._retryable_read(func, self._read_preference_for(s), s, operation)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1861, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1828, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2565, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2702, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1681, in _conn_from_server
+    with self._checkout(server, session) as conn:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1591, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1346, in checkout
+    conn = self._get_conn(checkout_started_time, handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1507, in _get_conn
+    conn = self.connect(handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1287, in connect
+    _raise_connection_failure(self.address, error, timeout_details=details)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 203, in _raise_connection_failure
+    raise NetworkTimeout(msg) from error
+pymongo.errors.NetworkTimeout: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+2025-03-03 22:08:53,809 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:09:03,919 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:09:30,397 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:09:35,325 - ERROR - Error fetching data: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1265, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 862, in _configured_socket
+    sock = _create_connection(address, options)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 846, in _create_connection
+    raise err
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 839, in _create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 102, in fetch_data
+    total = await asyncio.to_thread(collection.count_documents, query)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2154, in count_documents
+    return self._retryable_non_cursor_read(_cmd, session, _Op.COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2168, in _retryable_non_cursor_read
+    return client._retryable_read(func, self._read_preference_for(s), s, operation)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1861, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1828, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2565, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2702, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1681, in _conn_from_server
+    with self._checkout(server, session) as conn:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1591, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1346, in checkout
+    conn = self._get_conn(checkout_started_time, handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1507, in _get_conn
+    conn = self.connect(handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1287, in connect
+    _raise_connection_failure(self.address, error, timeout_details=details)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 203, in _raise_connection_failure
+    raise NetworkTimeout(msg) from error
+pymongo.errors.NetworkTimeout: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+2025-03-03 22:09:39,008 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:09:39,607 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:09:44,718 - ERROR - Error fetching data: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1265, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 862, in _configured_socket
+    sock = _create_connection(address, options)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 846, in _create_connection
+    raise err
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 839, in _create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 102, in fetch_data
+    total = await asyncio.to_thread(collection.count_documents, query)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2154, in count_documents
+    return self._retryable_non_cursor_read(_cmd, session, _Op.COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2168, in _retryable_non_cursor_read
+    return client._retryable_read(func, self._read_preference_for(s), s, operation)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1861, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1828, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2565, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2702, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1681, in _conn_from_server
+    with self._checkout(server, session) as conn:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1591, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1346, in checkout
+    conn = self._get_conn(checkout_started_time, handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1507, in _get_conn
+    conn = self.connect(handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1287, in connect
+    _raise_connection_failure(self.address, error, timeout_details=details)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 203, in _raise_connection_failure
+    raise NetworkTimeout(msg) from error
+pymongo.errors.NetworkTimeout: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+2025-03-03 22:09:44,739 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:09:48,007 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:10:00,233 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:10:16,250 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:10:19,378 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:10:27,873 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:10:41,496 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:10:47,463 - ERROR - Error fetching data: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1265, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 862, in _configured_socket
+    sock = _create_connection(address, options)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 846, in _create_connection
+    raise err
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 839, in _create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 103, in fetch_data
+    data = await asyncio.to_thread(lambda: list(collection.find(query).sort(sort).skip(offset).limit(limit)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 103, in <lambda>
+    data = await asyncio.to_thread(lambda: list(collection.find(query).sort(sort).skip(offset).limit(limit)))
+                                           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\cursor.py", line 1281, in __next__
+    return self.next()
+           ~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\cursor.py", line 1257, in next
+    if len(self._data) or self._refresh():
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\cursor.py", line 1205, in _refresh
+    self._send_message(q)
+    ~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\cursor.py", line 1100, in _send_message
+    response = client._run_operation(
+        operation, self._unpack_response, address=self._address
+    )
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1752, in _run_operation
+    return self._retryable_read(
+           ~~~~~~~~~~~~~~~~~~~~^
+        _cmd,
+        ^^^^^
+    ...<4 lines>...
+        operation=operation.name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1861, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1828, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2565, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2702, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1681, in _conn_from_server
+    with self._checkout(server, session) as conn:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1591, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1346, in checkout
+    conn = self._get_conn(checkout_started_time, handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1507, in _get_conn
+    conn = self.connect(handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1287, in connect
+    _raise_connection_failure(self.address, error, timeout_details=details)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 203, in _raise_connection_failure
+    raise NetworkTimeout(msg) from error
+pymongo.errors.NetworkTimeout: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+2025-03-03 22:10:47,486 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:11:09,262 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:11:16,798 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:11:32,991 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:19:25,550 - ERROR - Error fetching data: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1265, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 862, in _configured_socket
+    sock = _create_connection(address, options)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 846, in _create_connection
+    raise err
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 839, in _create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 102, in fetch_data
+    total = await asyncio.to_thread(collection.count_documents, query)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2154, in count_documents
+    return self._retryable_non_cursor_read(_cmd, session, _Op.COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2168, in _retryable_non_cursor_read
+    return client._retryable_read(func, self._read_preference_for(s), s, operation)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1861, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1828, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2565, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2702, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1681, in _conn_from_server
+    with self._checkout(server, session) as conn:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1591, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1346, in checkout
+    conn = self._get_conn(checkout_started_time, handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1507, in _get_conn
+    conn = self.connect(handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1287, in connect
+    _raise_connection_failure(self.address, error, timeout_details=details)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 203, in _raise_connection_failure
+    raise NetworkTimeout(msg) from error
+pymongo.errors.NetworkTimeout: zyrasiemcluster-shard-00-01.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+2025-03-03 22:19:28,284 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:19:54,186 - INFO - Starting FastAPI server...
+2025-03-03 22:21:01,086 - ERROR - Error fetching data: zyrasiemcluster-shard-00-02.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1265, in connect
+    sock = _configured_socket(self.address, self.opts)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 862, in _configured_socket
+    sock = _create_connection(address, options)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 846, in _create_connection
+    raise err
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 839, in _create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 102, in fetch_data
+    total = await asyncio.to_thread(collection.count_documents, query)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2154, in count_documents
+    return self._retryable_non_cursor_read(_cmd, session, _Op.COUNT)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\collection.py", line 2168, in _retryable_non_cursor_read
+    return client._retryable_read(func, self._read_preference_for(s), s, operation)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1861, in _retryable_read
+    return self._retry_internal(
+           ~~~~~~~~~~~~~~~~~~~~^
+        func,
+        ^^^^^
+    ...<7 lines>...
+        operation_id=operation_id,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1828, in _retry_internal
+    ).run()
+      ~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2565, in run
+    return self._read() if self._is_read else self._write()
+           ~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 2702, in _read
+    with self._client._conn_from_server(self._read_pref, self._server, self._session) as (
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1681, in _conn_from_server
+    with self._checkout(server, session) as conn:
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 1591, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1346, in checkout
+    conn = self._get_conn(checkout_started_time, handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1507, in _get_conn
+    conn = self.connect(handler=handler)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 1287, in connect
+    _raise_connection_failure(self.address, error, timeout_details=details)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\pool.py", line 203, in _raise_connection_failure
+    raise NetworkTimeout(msg) from error
+pymongo.errors.NetworkTimeout: zyrasiemcluster-shard-00-02.8ydms.mongodb.net:27017: timed out (configured timeouts: connectTimeoutMS: 20000.0ms)
+2025-03-03 22:21:01,110 - ERROR - Error fetching dashboard data: Object of type JSONResponse is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\adnan\OneDrive\Desktop\ZyraSIEM\server.py", line 231, in get_dashboard_data
+    return JSONResponse(content={
+        "total_agents": total_agents,
+    ...<4 lines>...
+        "system_status": system_status
+    })
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 181, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 44, in __init__
+    self.body = self.render(content)
+                ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\responses.py", line 184, in render
+    return json.dumps(
+           ~~~~~~~~~~^
+        content,
+        ^^^^^^^^
+    ...<3 lines>...
+        separators=(",", ":"),
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ).encode("utf-8")
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type JSONResponse is not JSON serializable
+2025-03-03 22:33:46,727 - INFO - Starting FastAPI server...
+2025-03-03 22:36:21,033 - INFO - Local SQLite database initialized
+2025-03-03 22:36:21,038 - INFO - Starting FastAPI server...
+2025-03-03 22:36:48,262 - INFO - MongoDB connected and indexes created
+2025-03-03 22:36:52,341 - WARNING - Redis connection failed: Error 22 connecting to localhost:6379. The remote computer refused the network connection.. Proceeding without caching.
+2025-03-03 22:37:12,221 - ERROR - WebSocket error: Error 22 connecting to localhost:6379. The remote computer refused the network connection.
+2025-03-03 22:37:38,891 - ERROR - WebSocket error: Error 22 connecting to localhost:6379. The remote computer refused the network connection.
+2025-03-03 22:40:18,626 - INFO - Connections closed
+2025-03-03 22:40:20,611 - INFO - Local SQLite database initialized
+2025-03-03 22:40:20,615 - INFO - Starting FastAPI server...
+2025-03-03 22:40:22,402 - INFO - MongoDB connected and indexes created
+2025-03-03 22:40:26,875 - ERROR - WebSocket error: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-03 22:43:16,651 - INFO - MongoDB connection closed
+2025-03-03 22:43:18,543 - INFO - Starting FastAPI server...
+2025-03-03 22:43:20,272 - INFO - MongoDB connected and indexes created
+2025-03-03 22:43:50,021 - INFO - WebSocket disconnected
+2025-03-03 22:50:48,716 - INFO - MongoDB connection closed
+2025-03-03 22:50:50,955 - INFO - Starting FastAPI server...
+2025-03-03 22:50:53,198 - INFO - MongoDB connected and indexes created
+2025-03-03 22:52:54,921 - INFO - MongoDB connection closed
+2025-03-03 22:52:56,835 - INFO - Starting FastAPI server...
+2025-03-03 22:52:58,972 - INFO - MongoDB connected and indexes created
+2025-03-03 22:53:08,862 - INFO - WebSocket disconnected
+2025-03-03 22:53:42,420 - INFO - WebSocket disconnected
+2025-03-03 22:54:10,056 - INFO - WebSocket disconnected
+2025-03-03 22:59:42,028 - INFO - WebSocket disconnected
+2025-03-03 22:59:42,357 - INFO - MongoDB connection closed
+2025-03-03 22:59:45,318 - INFO - Starting FastAPI server...
+2025-03-03 22:59:47,247 - INFO - MongoDB connected and indexes created
+2025-03-03 23:00:13,692 - INFO - WebSocket disconnected

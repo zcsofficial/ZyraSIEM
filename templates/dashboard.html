@@ -4,98 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zyra SIEM Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#6B46C1',
+                    secondary: '#E9D8FD'
+                },
+                borderRadius: {
+                    'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px'
+                }
+            }
+        }
+    }
+    </script>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .stats { display: flex; justify-content: space-between; margin-bottom: 20px; }
-        .stat-box { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); flex: 1; margin: 0 10px; text-align: center; }
-        .stat-box h3 { margin: 0; color: #333; }
-        .stat-box p { font-size: 24px; margin: 10px 0 0; color: #007bff; }
-        .section { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
-        .section h2 { margin-top: 0; color: #333; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background-color: #f8f8f8; }
-        tr:hover { background-color: #f1f1f1; }
-        a { color: #007bff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .nav { margin-bottom: 20px; }
-        .nav a { margin-right: 20px; }
+        .severity-critical { background-color: rgba(239, 68, 68, 0.1); color: rgb(239, 68, 68); }
+        .severity-high { background-color: rgba(249, 115, 22, 0.1); color: rgb(249, 115, 22); }
+        .severity-medium { background-color: rgba(234, 179, 8, 0.1); color: rgb(234, 179, 8); }
+        .severity-low { background-color: rgba(59, 130, 246, 0.1); color: rgb(59, 130, 246); }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="nav">
-            <a href="/">Dashboard</a>
-            <a href="/agents">Agents</a>
-            <a href="/alerts">Alerts</a>
-        </div>
-        <h1>Zyra SIEM Dashboard</h1>
-
-        <div class="stats">
-            <div class="stat-box">
-                <h3>Total Agents</h3>
-                <p>{{ total_agents }}</p>
+<body class="bg-white">
+    <div class="flex h-screen">
+        <nav class="w-64 bg-white border-r border-gray-200 p-4">
+            <div class="mb-8">
+                <h1 class="text-2xl font-['Pacifico'] text-primary">Zyra SIEM</h1>
             </div>
-            <div class="stat-box">
-                <h3>Total Logs</h3>
-                <p>{{ total_logs }}</p>
+            <div class="space-y-2">
+                <a href="/" class="flex items-center px-4 py-2 text-primary bg-secondary rounded"><i class="ri-dashboard-line mr-3"></i> Dashboard</a>
+                <a href="/alerts" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-alarm-warning-line mr-3"></i> Alerts</a>
+                <a href="/logs" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-file-list-line mr-3"></i> Logs</a>
+                <a href="/agents" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-computer-line mr-3"></i> Agents</a>
+                <a href="/malware" class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded"><i class="ri-virus-line mr-3"></i> Malware Analysis</a>
             </div>
-            <div class="stat-box">
-                <h3>Total Alerts</h3>
-                <p>{{ total_alerts }}</p>
+        </nav>
+
+        <main class="flex-1 overflow-auto">
+            <header class="bg-white border-b border-gray-200 p-4">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-xl font-semibold text-gray-800">Dashboard Overview</h2>
+                    <div class="flex items-center space-x-4">
+                        <span id="currentTime" class="text-gray-600"></span>
+                        <button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 rounded-full"><i class="ri-notification-3-line"></i></button>
+                        <button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 rounded-full"><i class="ri-user-line"></i></button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-6">
+                <div class="grid grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-gray-600">Total Agents</h3>
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full"><i class="ri-computer-line"></i></div>
+                        </div>
+                        <div class="flex items-end">
+                            <span class="text-2xl font-semibold text-gray-800" id="agentCount">{{ data.total_agents }}</span>
+                            <span class="ml-2 text-sm text-green-500">+2.5%</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-gray-600">Total Logs</h3>
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full"><i class="ri-file-list-line"></i></div>
+                        </div>
+                        <div class="flex items-end">
+                            <span class="text-2xl font-semibold text-gray-800" id="logCount">{{ data.total_logs }}</span>
+                            <span class="ml-2 text-sm text-green-500">+12.3%</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-gray-600">Total Alerts</h3>
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full"><i class="ri-alarm-warning-line"></i></div>
+                        </div>
+                        <div class="flex items-end">
+                            <span class="text-2xl font-semibold text-gray-800" id="alertCount">{{ data.total_alerts }}</span>
+                            <span class="ml-2 text-sm text-red-500">+5.7%</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-gray-600">Real-time Activity</h3>
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full"><i class="ri-pulse-line"></i></div>
+                        </div>
+                        <div id="activityChart" class="h-12"></div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-lg font-semibold text-gray-800">Recent Alerts</h3>
+                        <a href="/alerts" class="px-4 py-2 text-sm text-primary hover:bg-primary/5 rounded-button">View All</a>
+                    </div>
+                    <form class="mb-4">
+                        <div class="flex space-x-4">
+                            <input type="text" name="search" value="{{ search or '' }}" placeholder="Search alerts..." class="px-4 py-2 border rounded w-1/3">
+                            <select name="severity" class="px-4 py-2 border rounded">
+                                <option value="">All Severities</option>
+                                <option value="critical" {% if severity == "critical" %}selected{% endif %}>Critical</option>
+                                <option value="high" {% if severity == "high" %}selected{% endif %}>High</option>
+                                <option value="medium" {% if severity == "medium" %}selected{% endif %}>Medium</option>
+                                <option value="low" {% if severity == "low" %}selected{% endif %}>Low</option>
+                            </select>
+                            <select name="source" class="px-4 py-2 border rounded">
+                                <option value="">All Sources</option>
+                                {% for alert in data.recent_alerts %}
+                                <option value="{{ alert.source }}" {% if source == alert.source %}selected{% endif %}>{{ alert.source }}</option>
+                                {% endfor %}
+                            </select>
+                            <select name="sort_by" class="px-4 py-2 border rounded">
+                                <option value="timestamp" {% if sort_by == "timestamp" %}selected{% endif %}>Timestamp</option>
+                                <option value="severity" {% if sort_by == "severity" %}selected{% endif %}>Severity</option>
+                                <option value="source" {% if sort_by == "source" %}selected{% endif %}>Source</option>
+                            </select>
+                            <select name="sort_order" class="px-4 py-2 border rounded">
+                                <option value="desc" {% if sort_order == "desc" %}selected{% endif %}>Descending</option>
+                                <option value="asc" {% if sort_order == "asc" %}selected{% endif %}>Ascending</option>
+                            </select>
+                            <button type="submit" class="px-4 py-2 bg-primary text-white rounded">Filter</button>
+                        </div>
+                    </form>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="text-left text-sm text-gray-500 border-b border-gray-200">
+                                    <th class="pb-3 font-medium">Timestamp</th>
+                                    <th class="pb-3 font-medium">Source</th>
+                                    <th class="pb-3 font-medium">Event Type</th>
+                                    <th class="pb-3 font-medium">Severity</th>
+                                    <th class="pb-3 font-medium">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="alertsTableBody">
+                                {% for alert in data.recent_alerts %}
+                                <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                    <td class="py-3 text-sm text-gray-600">{{ alert.timestamp }}</td>
+                                    <td class="py-3 text-sm text-gray-600">{{ alert.source }}</td>
+                                    <td class="py-3 text-sm text-gray-600">{{ alert.event }}</td>
+                                    <td class="py-3"><span class="px-2 py-1 text-xs font-medium rounded severity-{{ alert.severity.lower() }}">{{ alert.severity }}</span></td>
+                                    <td class="py-3 text-sm text-gray-600">{{ alert.status }}</td>
+                                </tr>
+                                {% else %}
+                                <tr><td colspan="5" class="py-3 text-sm text-gray-600">No alerts available</td></tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="section">
-            <h2>Latest 10 Alerts</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Timestamp</th>
-                        <th>Type</th>
-                        <th>Severity</th>
-                        <th>Details</th>
-                        <th>Agent ID</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for alert in latest_alerts %}
-                    <tr>
-                        <td>{{ alert.timestamp }}</td>
-                        <td>{{ alert.type }}</td>
-                        <td>{{ alert.severity }}</td>
-                        <td>{{ alert.details }}</td>
-                        <td><a href="/agents/{{ alert.agent_id }}">{{ alert.agent_id }}</a></td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-
-        <div class="section">
-            <h2>Latest 10 Logs</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Timestamp</th>
-                        <th>Type</th>
-                        <th>Agent ID</th>
-                        <th>Data</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for log in latest_logs %}
-                    <tr>
-                        <td>{{ log.timestamp }}</td>
-                        <td><a href="/logs/{{ log.log_type }}">{{ log.log_type }}</a></td>
-                        <td><a href="/agents/{{ log.agent_id }}">{{ log.agent_id }}</a></td>
-                        <td>{{ log[log.log_type] | tojson | safe }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+        </main>
     </div>
+    <script>
+        const ws = new WebSocket("{{ ws_url }}");
+
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('currentTime').textContent = now.toLocaleString();
+        }
+
+        function animateCount(element, target, duration = 2000) {
+            const start = parseInt(element.textContent) || 0;
+            const increment = (target - start) / (duration / 16);
+            let current = start;
+            const animate = () => {
+                current += increment;
+                if ((increment > 0 && current >= target) || (increment < 0 && current <= target)) {
+                    element.textContent = target.toLocaleString();
+                    return;
+                }
+                element.textContent = Math.round(current).toLocaleString();
+                requestAnimationFrame(animate);
+            };
+            animate();
+        }
+
+        function initActivityChart() {
+            const chart = echarts.init(document.getElementById('activityChart'));
+            const option = {
+                animation: false,
+                grid: { top: 0, right: 0, bottom: 0, left: 0 },
+                xAxis: { type: 'category', show: false, data: Array(20).fill(0) },
+                yAxis: { type: 'value', show: false },
+                series: [{
+                    data: Array(20).fill(0).map(() => Math.random() * 100),
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'none',
+                    areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        { offset: 0, color: 'rgba(107, 70, 193, 0.3)' },
+                        { offset: 1, color: 'rgba(107, 70, 193, 0.1)' }
+                    ]) },
+                    lineStyle: { color: '#6B46C1' }
+                }]
+            };
+            chart.setOption(option);
+            setInterval(() => {
+                const newData = option.series[0].data.slice(1);
+                newData.push(Math.random() * 100);
+                option.series[0].data = newData;
+                chart.setOption(option);
+            }, 1000);
+        }
+
+        ws.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            animateCount(document.getElementById('agentCount'), data.total_agents);
+            animateCount(document.getElementById('logCount'), data.total_logs);
+            animateCount(document.getElementById('alertCount'), data.total_alerts);
+
+            const tbody = document.getElementById('alertsTableBody');
+            tbody.innerHTML = data.recent_alerts.map(alert => `
+                <tr class="border-b border-gray-100 hover:bg-gray-50">
+                    <td class="py-3 text-sm text-gray-600">${alert.timestamp}</td>
+                    <td class="py-3 text-sm text-gray-600">${alert.source}</td>
+                    <td class="py-3 text-sm text-gray-600">${alert.event}</td>
+                    <td class="py-3"><span class="px-2 py-1 text-xs font-medium rounded severity-${alert.severity.toLowerCase()}">${alert.severity}</span></td>
+                    <td class="py-3 text-sm text-gray-600">${alert.status}</td>
+                </tr>
+            `).join('') || '<tr><td colspan="5" class="py-3 text-sm text-gray-600">No alerts available</td></tr>';
+        };
+
+        ws.onerror = function(error) {
+            console.error("WebSocket error:", error);
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateTime();
+            setInterval(updateTime, 1000);
+            initActivityChart();
+        });
+    </script>
 </body>
 </html>
