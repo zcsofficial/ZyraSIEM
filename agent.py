@@ -90,7 +90,7 @@ def initialize_mongo():
 initialize_mongo()
 
 # API endpoints
-API_SERVER_URL = "http://your-api-endpoint.localhost:5000"  # Replace with your API server
+API_SERVER_URL = "http://localhost:5000"  # API server running on port 5000
 VT_API_KEY_URL = f"{API_SERVER_URL}/get_vt_api_key"
 COMMAND_URL = f"{API_SERVER_URL}/command"
 
