@@ -11053,3 +11053,128 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='your-api-endpoint.
 2026-02-16 20:13:37,934 - DEBUG - Starting new HTTP connection (1): your-api-endpoint.localhost:5000
 2026-02-16 20:13:37,939 - INFO - Data stored locally in logs
 2026-02-16 20:13:37,944 - INFO - Data stored locally in alerts
+2026-02-16 20:15:06,402 - INFO - Elevating to Administrator privileges...
+2026-02-16 20:15:11,489 - ERROR - Failed to connect to MongoDB: The DNS query name does not exist: _mongodb._tcp.zyrasiemcluster.8ydms.mongodb.net.
+Traceback (most recent call last):
+  File "C:\xampp1\htdocs\ZyraSIEM\agent.py", line 79, in initialize_mongo
+    mongo_client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=10000)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 784, in __init__
+    res = uri_parser.parse_uri(
+        entity,
+    ...<6 lines>...
+        srv_max_hosts=srv_max_hosts,
+    )
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\uri_parser.py", line 558, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\srv_resolver.py", line 141, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\srv_resolver.py", line 120, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\pymongo\srv_resolver.py", line 114, in _resolve_uri
+    raise ConfigurationError(str(exc)) from None
+pymongo.errors.ConfigurationError: The DNS query name does not exist: _mongodb._tcp.zyrasiemcluster.8ydms.mongodb.net.
+
+2026-02-16 20:15:11,490 - INFO - Local SQLite database initialized
+2026-02-16 20:15:11,491 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2026-02-16 20:15:15,596 - ERROR - Error fetching VT API key: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /get_vt_api_key (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA295456A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 445, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 276, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001DA295456A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /get_vt_api_key (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA295456A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp1\htdocs\ZyraSIEM\agent.py", line 118, in fetch_vt_api_key
+    response = requests.get(VT_API_KEY_URL, timeout=5)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\adnan\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /get_vt_api_key (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA295456A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+2026-02-16 20:15:15,601 - INFO - Data stored locally in logs
+2026-02-16 20:15:15,622 - INFO - System logs collected
+2026-02-16 20:15:15,652 - INFO - Processes monitored with VirusTotal
+2026-02-16 20:15:15,653 - INFO - Registry change detected: SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+2026-02-16 20:15:15,653 - INFO - Security logs collected
+2026-02-16 20:15:15,654 - WARNING - No internet/MongoDB connection. Storing locally.
+2026-02-16 20:15:15,655 - DEBUG - Starting new HTTP connection (1): localhost:5000
+2026-02-16 20:15:15,660 - INFO - Data stored locally in logs
+2026-02-16 20:15:15,665 - INFO - Data stored locally in alerts
+2026-02-16 20:15:16,602 - INFO - System metrics collected
