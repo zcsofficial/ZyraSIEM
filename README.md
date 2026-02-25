@@ -1,455 +1,396 @@
 # Zyra SIEM
 
-**Zyra SIEM** is a comprehensive Security Information and Event Management system designed for Windows environments. It provides real-time monitoring, threat detection, and centralized security event management through an agent-based architecture.
+**Zyra SIEM** is a lightweight, Windows-focused Security Information and Event Management (SIEM) system built around an **agent → API server → web dashboard** architecture.
+
+It collects endpoint telemetry (system metrics, Windows Event Logs, network/DNS signals, process activity, registry changes), performs basic anomaly detection, stores events centrally in MongoDB (with **SQLite offline fallback**), and serves a real-time dashboard via REST + WebSockets.
 
 ![Zyra SIEM](https://img.shields.io/badge/Version-1.0.0-purple)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
 
-## 📋 Table of Contents
+## Table of contents
 
-- [Features](#features)
-- [Architecture](#architecture)
-- [Prerequisites](#prerequisites)
+- [Key features](#key-features)
+- [High-level architecture](#high-level-architecture)
+- [Data Flow Diagrams (DFD) - Level 0 to Level 3](#data-flow-diagrams-dfd---level-0-to-level-3)
+- [Data model](#data-model)
+- [API reference](#api-reference)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Usage](#usage)
-- [API Documentation](#api-documentation)
-- [Project Structure](#project-structure)
-- [Technology Stack](#technology-stack)
-- [Security Considerations](#security-considerations)
+- [Running Zyra SIEM](#running-zyra-siem)
+- [Project structure](#project-structure)
+- [Security notes](#security-notes)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
+- [License](#license)
 
-## ✨ Features
+## Key features
 
-### Core Capabilities
+- **Windows endpoint telemetry**: CPU/RAM/Disk, processes, DNS queries, basic network in/out signals, registry change monitoring, System + Security Event Logs.
+- **Anomaly detection (agent-side)**:
+  - High CPU \(> 90%\)
+  - Multiple failed logins \(> 5 per user\)
+  - Unusual login times \(\(00:00\)–\(06:00\)\)
+  - File deletion signals (Event ID 4663)
+  - Suspicious processes (high CPU or `cmd.exe` heuristic)
+  - “Unknown country” outbound IP heuristic (via ipinfo)
+- **Threat intel enrichment**:
+  - **VirusTotal** hash lookups (optional) for running executables
+  - **ipinfo.io** enrichment for public IP locations (optional)
+- **Central storage**: MongoDB collections `device_info`, `logs`, `alerts`.
+- **Offline mode**: agent writes to `local_storage.db` (SQLite) when MongoDB is unreachable and syncs later.
+- **Dashboard**: FastAPI + Jinja templates with **live updates** via `ws://.../ws/dashboard`.
 
-- **Real-time Monitoring**: Continuous collection of system metrics, processes, and network activity
-- **Threat Detection**: Automated malware scanning using VirusTotal API integration
-- **Anomaly Detection**: Intelligent detection of suspicious activities including:
-  - High CPU usage (>90%)
-  - Multiple failed login attempts
-  - Unusual login times
-  - Suspicious processes
-  - File deletion events
-  - Registry changes
-- **Network Analysis**: DNS query monitoring and network traffic analysis with IP geolocation
-- **Windows Event Log Integration**: Comprehensive collection of System and Security event logs
-- **Offline Support**: Local SQLite storage when MongoDB connection is unavailable
-- **Web Dashboard**: Modern, responsive web interface for monitoring and analysis
-- **Real-time Updates**: WebSocket-based live dashboard updates
+## High-level architecture
 
-### Security Features
-
-- Malware detection via VirusTotal
-- Failed login attempt tracking
-- Privilege escalation monitoring
-- Registry change detection
-- Network traffic analysis
-- Process behavior monitoring
-
-## 🏗️ Architecture
-
-Zyra SIEM follows a three-tier architecture:
+Default ports:
+- **API server**: `server.py` on `http://localhost:5000`
+- **Dashboard web app**: `app.py` on `http://localhost:5001`
 
 ```
-┌─────────────────┐
-│  Web Dashboard  │  (Port 5001)
-│     (app.py)    │
-└────────┬────────┘
-         │
-┌────────▼────────┐
-│   API Server    │  (Port 5000)
-│   (server.py)   │
-└────────┬────────┘
-         │
-┌────────▼────────┐
-│   MongoDB       │
-│   (Atlas)       │
-└─────────────────┘
-         ▲
-         │
-┌────────┴────────┐
-│  Agent (Windows)│
-│   (agent.py)    │
-└─────────────────┘
+┌────────────────────────────┐
+│   Web Dashboard (FastAPI)  │  app.py  :5001
+│   HTML via Jinja templates │
+└───────────────┬────────────┘
+                │ REST + WebSocket
+┌───────────────▼────────────┐
+│        API Server           │  server.py :5000
+│ REST: /api/v1/*             │
+│ WS:   /ws/dashboard         │
+└───────────────┬────────────┘
+                │ MongoDB reads/writes
+┌───────────────▼────────────┐
+│          MongoDB            │  zyra_siem
+│ device_info / logs / alerts │
+└───────────────▲────────────┘
+                │
+┌───────────────┴────────────┐
+│     Windows Agent           │  agent.py (Admin)
+│ Telemetry + detection       │
+└────────────────────────────┘
 ```
 
-### Components
+## Data Flow Diagrams (DFD) - Level 0 to Level 3
 
-1. **Agent (`agent.py`)**: Windows-based monitoring agent that collects system data
-2. **API Server (`server.py`)**: FastAPI backend providing REST API and WebSocket endpoints
-3. **Web Application (`app.py`)**: Frontend server serving the dashboard interface
-4. **MongoDB**: Centralized database for logs, alerts, and device information
+These DFDs are intentionally **data-centric**: they focus on what data moves where, and what processes/stores are involved.
 
-## 📦 Prerequisites
+### DFD Level 0 (Context)
 
-### System Requirements
+```mermaid
+flowchart LR
+  Analyst[Security Analyst] <-->|Views dashboards / investigates| Zyra((Zyra SIEM))
+  Endpoint[Windows Endpoint] -->|Telemetry & events| Zyra
+  VT[VirusTotal] <-->|Threat intel lookups| Zyra
+  IPInfo[ipinfo.io] <-->|IP enrichment| Zyra
+  Mongo[(MongoDB)] <-->|Store / query| Zyra
+```
 
-- **OS**: Windows 10/11 or Windows Server
-- **Python**: 3.8 or higher
-- **Administrator Privileges**: Required for agent execution
-- **Network**: Internet connection for MongoDB Atlas and API services
+### DFD Level 1 (System decomposition)
 
-### External Services
+```mermaid
+flowchart LR
+  subgraph External
+    Analyst[Security Analyst]
+    Endpoint[Windows Endpoint]
+    VT[VirusTotal]
+    IPInfo[ipinfo.io]
+  end
 
-- MongoDB Atlas account (or local MongoDB instance)
-- VirusTotal API key (optional, for malware scanning)
-- ipinfo.io token (for IP geolocation)
+  subgraph ZyraSIEM[Zyra SIEM]
+    P1[1. Endpoint Agent\n(agent.py)]
+    P2[2. API Server\n(server.py)]
+    P3[3. Dashboard Web App\n(app.py)]
+    D1[(MongoDB\nzyra_siem)]
+    D2[(SQLite Offline Store\nlocal_storage.db)]
+  end
 
-## 🚀 Installation
+  Endpoint -->|metrics / logs / network / processes| P1
+  P1 -->|device_info upsert| D1
+  P1 -->|logs documents| D1
+  P1 -->|alerts documents| D1
+  P1 -->|offline logs/alerts| D2
+  D2 -->|sync when online| D1
 
-### Step 1: Clone the Repository
+  P1 <-->|VT hash lookups (optional)| VT
+  P1 <-->|IP enrichment (optional)| IPInfo
+
+  P2 -->|query logs/alerts/devices| D1
+  P3 -->|REST calls /api/v1/*| P2
+  P3 <-->|WS /ws/dashboard| P2
+  Analyst <-->|Browser UI| P3
+```
+
+### DFD Level 2 (Agent internals)
+
+```mermaid
+flowchart TB
+  subgraph Agent[Windows Agent (agent.py)]
+    A1[Collect system metrics\n(psutil)]
+    A2[Read Windows Event Logs\n(System/Security)]
+    A3[Capture DNS + traffic hints\n(scapy + Npcap)]
+    A4[Process monitoring\n+ optional VT checks]
+    A5[Registry monitoring\n(Run key)]
+    A6[Anomaly detection\n(rule-based)]
+    A7[Persist + sync\n(MongoDB or SQLite)]
+  end
+
+  OS[(Windows OS)] --> A1
+  OS --> A2
+  Net[(Network stack)] --> A3
+  OS --> A4
+  OS --> A5
+
+  A1 --> Q[(In-memory queues)]
+  A2 --> Q
+  A3 --> Q
+  A4 --> Q
+  A5 --> Q
+
+  Q --> A6
+  Q --> A7
+  A6 -->|alerts| A7
+
+  D1[(MongoDB)] <-->|online writes| A7
+  D2[(SQLite local_storage.db)] <-->|offline writes / later sync| A7
+  VT[VirusTotal] <-->|optional lookup| A4
+  IPInfo[ipinfo.io] <-->|IP enrichment| A3
+```
+
+### DFD Level 3 (Alerting & storage pipeline detail)
+
+```mermaid
+flowchart LR
+  subgraph Pipeline[Agent alerting + storage pipeline]
+    S1[1. Gather latest telemetry\nfrom queues]
+    S2[2. Normalize into a\nlog_data document]
+    S3[3. Detect anomalies\n(rules)]
+    S4[4. Persist logs + alerts]
+    S5[5. Offline sync worker]
+  end
+
+  S1 --> S2
+  S2 -->|log_data| S4
+  S2 --> S3
+  S3 -->|alerts[]| S4
+
+  Mongo[(MongoDB:\nlogs / alerts / device_info)] <-->|insert_one / insert_many| S4
+  SQLite[(SQLite:\nlocal_storage.db)] <-->|store_locally| S4
+  SQLite -->|read unsent rows| S5
+  S5 -->|insert_many + clear| Mongo
+```
+
+## Data model
+
+Zyra SIEM stores data in MongoDB database **`zyra_siem`**.
+
+### Collection: `device_info`
+
+- **Purpose**: registers endpoints and tracks last-seen.
+- **Key fields (as used by `agent.py`)**:
+  - `agent_id` (string, **unique**) — derived from Windows Machine GUID
+  - `hostname` (string)
+  - `os` (string)
+  - `first_seen` (ISO datetime string)
+  - `last_updated` (ISO datetime string)
+
+### Collection: `logs`
+
+- **Purpose**: time-series endpoint telemetry snapshots.
+- **Shape (as built in `agent.py`)**:
+  - `agent_id` (string)
+  - `timestamp` (ISO datetime string)
+  - `system_metrics` (object): `cpu_percent`, `memory_percent`, `disk_usage`, ...
+  - `dns_queries` (array): entries like `{ query, ip, timestamp }`
+  - `network` (object): `inbound[]`, `outbound[]` with optional geo fields
+  - `system_logs` (array): simplified Windows System log entries
+  - `security_logs` (array): simplified Windows Security log entries
+  - `processes` (array): `{pid, name, username, cpu_percent, memory_percent, exe_path, timestamp}`
+  - `registry_changes` (array): recent changes snapshot
+
+### Collection: `alerts`
+
+- **Purpose**: anomaly/threat detections produced by the agent.
+- **Typical fields**:
+  - `agent_id` (string)
+  - `timestamp` (ISO datetime string)
+  - `type` (string) — e.g. `High CPU`, `Multiple Failed Logins`, `Malware Detected`
+  - `severity` (string) — e.g. `High`, `Medium`, `Low` (note: case may vary)
+  - `details` (string)
+
+## API reference
+
+All API endpoints are served by `server.py` on port **5000**.
+
+### REST endpoints
+
+- **Dashboard summary**
+  - `GET /api/v1/dashboard`
+
+- **Logs (table-ready projection)**
+  - `GET /api/v1/logs`
+  - Query params: `limit`, `offset`, `search`, `sort_by`, `sort_order`, `severity`, `source`
+
+- **Alerts (table-ready projection)**
+  - `GET /api/v1/alerts`
+  - Query params: `limit`, `offset`, `search`, `sort_by`, `sort_order`, `severity`
+
+- **Agents**
+  - `GET /api/v1/agents`
+  - Query params: `limit`, `offset`, `sort_by`, `sort_order`
+
+- **Agent details**
+  - `GET /api/v1/agent/{agent_id}`
+
+- **Malware (subset of alerts)**
+  - `GET /api/v1/malware`
+
+### WebSocket endpoint
+
+- **Live dashboard updates**
+  - `WS /ws/dashboard`
+  - Sends dashboard data on a ~2 second interval.
+
+### Note on agent-referenced endpoints
+
+`agent.py` references endpoints such as `/get_vt_api_key` and `/command`, but the current `server.py` in this repository does **not** implement them yet. If you plan to use remote command execution or dynamically supply a VirusTotal API key, you’ll need to add those endpoints to `server.py`.
+
+## Installation
+
+### Requirements
+
+- Windows 10/11 (or Windows Server)
+- Python 3.8+
+- Administrator privileges (agent needs elevated access)
+- Npcap (required for Scapy sniffing)
+- MongoDB Atlas or a reachable MongoDB instance
+
+### Create a virtual environment (recommended)
 
 ```bash
-git clone <repository-url>
-cd ZyraSIEM
+python -m venv venv
+venv\Scripts\activate
+python -m pip install --upgrade pip
 ```
 
-### Step 2: Install Python Dependencies
+### Install dependencies
+
+This repository doesn’t currently ship a `requirements.txt`, so install the runtime dependencies manually:
 
 ```bash
-pip install pymongo requests psutil uuid dnspython scapy ipinfo pywin32 pillow virustotal-python wget tenacity fastapi uvicorn aiohttp jinja2
+pip install pymongo requests psutil dnspython scapy ipinfo pywin32 pillow virustotal-python wget tenacity fastapi uvicorn aiohttp jinja2
 ```
 
-Or install from requirements (if available):
+### Install Npcap (for network capture)
 
-```bash
-pip install -r requirements.txt
-```
-
-### Step 3: Install Npcap
-
-Npcap is required for network packet capture. Run the setup script:
+Run:
 
 ```bash
 python setup.py
 ```
 
-Alternatively, download and install manually from [https://npcap.com](https://npcap.com)
+Or install manually from [`https://npcap.com`](https://npcap.com).
 
-**Note**: The setup script requires administrator privileges.
+## Configuration
 
-### Step 4: Configure MongoDB
+### MongoDB connection
 
-1. Create a MongoDB Atlas cluster or use a local MongoDB instance
-2. Update the MongoDB connection string in `server.py` and `agent.py`:
+Both `agent.py` and `server.py` currently embed `MONGO_URI`. Update it to match your MongoDB environment.
 
-```python
-DB_PASSWORD = "your_password"
-ENCODED_PASSWORD = quote(DB_PASSWORD)
-MONGO_URI = f"mongodb+srv://zyraadmin:{ENCODED_PASSWORD}@your-cluster.mongodb.net/?retryWrites=true&w=majority&appName=ZyraSiemCluster"
-```
+### External services (optional)
 
-### Step 5: Configure API Keys (Optional)
+- **VirusTotal**: `agent.py` can perform file hash checks if a VirusTotal key is configured.
+- **ipinfo.io**: `agent.py` enriches external IPs using an ipinfo token.
 
-#### VirusTotal API Key
+### Recommended environment variables (hardening)
 
-Update the API endpoint in `agent.py`:
+For a safer deployment, migrate secrets from hardcoded values into environment variables (example naming):
 
-```python
-VT_API_KEY_URL = f"{API_SERVER_URL}/get_vt_api_key"
-```
+- `ZYRA_MONGO_URI`
+- `ZYRA_IPINFO_TOKEN`
+- `ZYRA_VT_API_KEY`
+- `ZYRA_API_SERVER_URL` (agent → server)
 
-Or set directly:
+## Running Zyra SIEM
 
-```python
-VT_API_KEY = "your_virustotal_api_key"
-```
+Start components in this order:
 
-#### ipinfo.io Token
-
-Update in `agent.py`:
-
-```python
-IPINFO_TOKEN = "your_ipinfo_token"
-```
-
-## ⚙️ Configuration
-
-### Agent Configuration
-
-The agent automatically generates a unique `AGENT_ID` based on the Windows Machine GUID. This ensures persistent identification across restarts.
-
-### Server Configuration
-
-- **API Server Port**: Default `5000` (configurable in `server.py`)
-- **Web Server Port**: Default `5001` (configurable in `app.py`)
-
-### Database Collections
-
-The system uses three main MongoDB collections:
-
-- `device_info`: Agent device information
-- `logs`: System logs and metrics
-- `alerts`: Security alerts and anomalies
-
-## 🎯 Usage
-
-### Starting the System
-
-#### 1. Start the API Server
+### 1) Start the API server
 
 ```bash
 python server.py
 ```
 
-The API server will start on `http://localhost:5000`
-
-#### 2. Start the Web Application
+### 2) Start the dashboard
 
 ```bash
 python app.py
 ```
 
-The web dashboard will be available at `http://localhost:5001`
+Open `http://localhost:5001`.
 
-#### 3. Run the Agent
-
-**Important**: Run as Administrator
+### 3) Run the Windows agent (Administrator)
 
 ```bash
 python agent.py
 ```
 
 The agent will:
-- Elevate to administrator privileges automatically
-- Connect to MongoDB
-- Start monitoring threads
-- Begin collecting and sending data
+- collect telemetry on a loop
+- generate alerts from heuristics
+- write to MongoDB when reachable
+- fall back to SQLite when offline and sync later
 
-### Accessing the Dashboard
-
-1. Open your web browser
-2. Navigate to `http://localhost:5001`
-3. View real-time dashboard with:
-   - Total agents count
-   - Total logs
-   - Total alerts
-   - Recent alerts table
-   - Real-time activity chart
-
-### Dashboard Pages
-
-- **Dashboard** (`/`): Overview with key metrics and recent alerts
-- **Alerts** (`/alerts`): All security alerts with filtering options
-- **Logs** (`/logs`): System logs and events
-- **Agents** (`/agents`): List of all registered agents
-- **Agent Details** (`/agent/{agent_id}`): Detailed view of a specific agent
-- **Malware Analysis** (`/malware`): Malware detection results
-
-## 📡 API Documentation
-
-### REST Endpoints
-
-#### Dashboard Data
-```
-GET /api/v1/dashboard
-```
-Returns overview statistics including total agents, logs, alerts, and recent alerts.
-
-#### Logs
-```
-GET /api/v1/logs?limit=100&offset=0&search=&sort_by=timestamp&sort_order=desc&severity=&source=
-```
-Query parameters:
-- `limit`: Number of results (1-1000)
-- `offset`: Pagination offset
-- `search`: Text search query
-- `sort_by`: Field to sort by
-- `sort_order`: `asc` or `desc`
-- `severity`: Filter by severity level
-- `source`: Filter by agent ID
-
-#### Alerts
-```
-GET /api/v1/alerts?limit=100&offset=0&search=&sort_by=timestamp&sort_order=desc&severity=
-```
-Similar parameters to logs endpoint.
-
-#### Agents
-```
-GET /api/v1/agents?limit=100&offset=0&sort_by=last_updated&sort_order=desc
-```
-
-#### Agent Details
-```
-GET /api/v1/agent/{agent_id}
-```
-Returns agent information, logs, and alerts for a specific agent.
-
-#### Malware
-```
-GET /api/v1/malware?limit=100&offset=0&sort_by=timestamp&sort_order=desc
-```
-
-### WebSocket Endpoint
-
-#### Real-time Dashboard Updates
-```
-WS /ws/dashboard
-```
-Sends dashboard data every 2 seconds.
-
-## 📁 Project Structure
+## Project structure
 
 ```
 ZyraSIEM/
-├── agent.py                 # Windows monitoring agent
-├── server.py                # FastAPI API server
-├── app.py                   # Web frontend server
-├── setup.py                 # Npcap installation script
-├── README.md                # Project documentation
-├── readme.txt               # Quick installation notes
-├── templates/               # HTML templates
-│   ├── dashboard.html      # Main dashboard page
-│   ├── alerts.html         # Alerts page
-│   ├── logs.html           # Logs page
-│   ├── agents.html         # Agents list page
-│   ├── agent.html          # Agent details page
-│   └── malware.html         # Malware analysis page
-├── local_storage.db         # SQLite fallback database
-├── agent.log               # Agent execution logs
-├── server.log              # API server logs
-└── webui.log               # Web application logs
+├── agent.py                  # Windows monitoring agent (Admin)
+├── server.py                 # FastAPI REST + WebSocket API (port 5000)
+├── app.py                    # FastAPI + Jinja dashboard (port 5001)
+├── setup.py                  # Npcap installer helper
+├── templates/                # Dashboard HTML templates
+│   ├── dashboard.html
+│   ├── alerts.html
+│   ├── logs.html
+│   ├── agents.html
+│   ├── agent.html
+│   └── malware.html
+├── local_storage.db          # SQLite fallback store (created at runtime)
+├── agent.log                 # Agent logs (created at runtime)
+├── server.log                # API server logs (created at runtime)
+└── setup.log                 # Setup logs (created at runtime)
 ```
 
-## 🛠️ Technology Stack
+## Security notes
 
-### Backend
-- **FastAPI**: Modern, fast web framework for building APIs
-- **Uvicorn**: ASGI server
-- **MongoDB**: NoSQL database for data storage
-- **SQLite**: Local fallback storage
-- **Pymongo**: MongoDB Python driver
+- **Secrets are currently hardcoded**: MongoDB password, ipinfo token, and (optionally) VirusTotal key behavior should be moved to environment variables or a secrets manager.
+- **No auth by default**: the API server enables permissive CORS and exposes endpoints without authentication. For anything beyond local testing, add:
+  - authentication/authorization
+  - TLS/HTTPS
+  - rate limiting
+  - request validation and audit logging
+- **Run the agent only where authorized**: endpoint monitoring may be regulated by policy/law. Ensure you have permission.
 
-### Monitoring & Analysis
-- **psutil**: System and process utilities
-- **scapy**: Network packet manipulation
-- **win32evtlog**: Windows Event Log access
-- **VirusTotal API**: Malware scanning
-- **ipinfo.io**: IP geolocation
+## Troubleshooting
 
-### Frontend
-- **Tailwind CSS**: Utility-first CSS framework
-- **ECharts**: Data visualization library
-- **Jinja2**: Template engine
-- **WebSocket**: Real-time communication
+- **Agent won’t start / permission errors**
+  - Run `agent.py` as Administrator.
 
-### Python Libraries
-- `requests`: HTTP library
-- `aiohttp`: Async HTTP client/server
-- `PIL/Pillow`: Image processing
-- `tenacity`: Retry library
+- **No network/DNS telemetry**
+  - Install Npcap and ensure Scapy has capture permissions.
 
-## 🔒 Security Considerations
+- **MongoDB connection failures**
+  - Check the connection string, Atlas IP allowlist, and network connectivity.
+  - The agent should fall back to `local_storage.db` and sync when connectivity returns.
 
-### Important Security Notes
+## Contributing
 
-1. **Credentials**: MongoDB passwords and API keys are currently hardcoded. **It is strongly recommended** to:
-   - Use environment variables
-   - Implement a configuration file with proper access controls
-   - Use secrets management solutions
+- Fork the repository
+- Create a feature branch
+- Make changes with clear commits
+- Open a pull request with a test plan
 
-2. **Administrator Privileges**: The agent requires admin privileges to:
-   - Access Windows Event Logs
-   - Monitor network traffic
-   - Capture system metrics
-   - Monitor registry changes
+## License
 
-3. **Network Security**: Ensure MongoDB Atlas has proper IP whitelisting and authentication enabled.
+Add a license file (for example, MIT) and update this section accordingly.
 
-4. **API Security**: Consider implementing:
-   - Authentication/Authorization
-   - Rate limiting
-   - HTTPS/TLS encryption
-   - API key management
-
-### Best Practices
-
-- Run agents only on trusted systems
-- Regularly update dependencies
-- Monitor agent logs for suspicious activity
-- Implement proper backup strategies for MongoDB
-- Use VPN or secure networks for agent-server communication
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-#### Agent Won't Start
-- **Issue**: Permission denied errors
-- **Solution**: Run as Administrator
-
-#### MongoDB Connection Failed
-- **Issue**: Cannot connect to MongoDB Atlas
-- **Solutions**:
-  - Verify MongoDB URI and credentials
-  - Check IP whitelist in MongoDB Atlas
-  - Verify internet connectivity
-  - Check firewall settings
-
-#### Network Capture Not Working
-- **Issue**: Scapy errors or no network data
-- **Solutions**:
-  - Ensure Npcap is installed
-  - Run agent as Administrator
-  - Check network adapter permissions
-
-#### VirusTotal API Errors
-- **Issue**: Malware scanning fails
-- **Solutions**:
-  - Verify API key is valid
-  - Check API rate limits
-  - Ensure internet connectivity
-
-### Log Files
-
-Check the following log files for detailed error information:
-
-- `agent.log`: Agent execution logs
-- `server.log`: API server logs
-- `webui.log`: Web application logs
-- `setup.log`: Setup script logs
-
-### Offline Mode
-
-The agent automatically falls back to local SQLite storage when MongoDB is unavailable. Data will sync when connectivity is restored.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these guidelines:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Development Setup
-
-1. Set up a virtual environment:
-```bash
-python -m venv venv
-venv\Scripts\activate  # Windows
-```
-
-2. Install development dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Configure local MongoDB or use MongoDB Atlas free tier
-
-## 📝 License
-
-[Specify your license here]
-
-## 📧 Contact & Support
-
-For issues, questions, or contributions, please [create an issue](link-to-issues) or contact the maintainers.
-
----
-
-**Note**: This is a security monitoring tool. Use responsibly and in compliance with applicable laws and regulations. Ensure you have proper authorization before monitoring systems.
