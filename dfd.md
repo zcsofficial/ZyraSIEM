@@ -86,19 +86,19 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-  subgraph External
+  subgraph External["External"]
     Analyst[Security Analyst]
     Endpoint[Windows Endpoint]
     VT[VirusTotal]
     IPInfo[ipinfo.io]
   end
 
-  subgraph ZyraSIEM[Zyra SIEM]
-    P1[1. Endpoint Agent\n(agent.py)]
-    P2[2. API Server\n(server.py)]
-    P3[3. Dashboard Web App\n(app.py)]
-    D1[(MongoDB\nzyra_siem)]
-    D2[(SQLite Offline Store\nlocal_storage.db)]
+  subgraph ZyraSIEM["Zyra SIEM"]
+    P1["1. Endpoint Agent agent.py"]
+    P2["2. API Server server.py"]
+    P3["3. Dashboard Web App app.py"]
+    D1["MongoDB zyra_siem"]
+    D2["SQLite Offline Store local_storage.db"]
   end
 
   Endpoint -->|metrics / logs / network / processes| P1
@@ -168,10 +168,10 @@ flowchart LR
   S1 --> S2
   S2 -->|log_data| S4
   S2 --> S3
-  S3 -->|alerts[]| S4
+  S3 -->|alerts list| S4
 
-  Mongo["(MongoDB:<br/>logs / alerts / device_info)"] <-->|insert_one / insert_many| S4
-  SQLite["(SQLite:<br/>local_storage.db)"] <-->|store_locally| S4
+  Mongo["MongoDB logs alerts device_info"] <-->|insert_one / insert_many| S4
+  SQLite["SQLite local_storage.db"] <-->|store_locally| S4
   SQLite -->|read unsent rows| S5
   S5 -->|insert_many + clear| Mongo
 ```
