@@ -101,20 +101,25 @@ flowchart LR
     D2["SQLite Offline Store local_storage.db"]
   end
 
-  Endpoint -->|metrics / logs / network / processes| P1
-  P1 -->|device_info upsert| D1
-  P1 -->|logs documents| D1
-  P1 -->|alerts documents| D1
-  P1 -->|offline logs/alerts| D2
-  D2 -->|sync when online| D1
+  Endpoint -->|metrics logs network processes| P1
+  P1 -->|device info upsert| D1
+  P1 -->|logs docs| D1
+  P1 -->|alerts docs| D1
+  P1 -->|offline logs alerts| D2
+  D2 -->|sync online| D1
 
-  P1 <-->|VT hash lookups (optional)| VT
-  P1 <-->|IP enrichment (optional)| IPInfo
+  P1 -->|vt hash lookup optional| VT
+  VT -->|vt response| P1
+  P1 -->|ip enrichment optional| IPInfo
+  IPInfo -->|ip response| P1
 
-  P2 -->|query logs/alerts/devices| D1
-  P3 -->|REST calls /api/v1/*| P2
-  P3 <-->|WS /ws/dashboard| P2
-  Analyst <-->|Browser UI| P3
+  P2 -->|query logs alerts devices| D1
+  P3 -->|rest api calls| P2
+  P2 -->|rest api response| P3
+  P3 -->|ws dashboard request| P2
+  P2 -->|ws dashboard stream| P3
+  Analyst -->|browser request| P3
+  P3 -->|ui response| Analyst
 ```
 
 ## DFD Level 2 (Agent internals)
