@@ -121,14 +121,14 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-  subgraph Agent[Windows Agent (agent.py)]
-    A1[Collect system metrics\n(psutil)]
-    A2[Read Windows Event Logs\n(System/Security)]
-    A3[Capture DNS + traffic hints\n(scapy + Npcap)]
-    A4[Process monitoring\n+ optional VT checks]
-    A5[Registry monitoring\n(Run key)]
-    A6[Anomaly detection\n(rule-based)]
-    A7[Persist + sync\n(MongoDB or SQLite)]
+  subgraph Agent["Windows Agent (agent.py)"]
+    A1["Collect system metrics<br/>(psutil)"]
+    A2["Read Windows Event Logs<br/>(System/Security)"]
+    A3["Capture DNS + traffic hints<br/>(scapy + Npcap)"]
+    A4["Process monitoring<br/>+ optional VT checks"]
+    A5["Registry monitoring<br/>(Run key)"]
+    A6["Anomaly detection<br/>(rule-based)"]
+    A7["Persist + sync<br/>(MongoDB or SQLite)"]
   end
 
   OS[(Windows OS)] --> A1
@@ -157,12 +157,12 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-  subgraph Pipeline[Agent alerting + storage pipeline]
-    S1[1. Gather latest telemetry\nfrom queues]
-    S2[2. Normalize into a\nlog_data document]
-    S3[3. Detect anomalies\n(rules)]
-    S4[4. Persist logs + alerts]
-    S5[5. Offline sync worker]
+  subgraph Pipeline["Agent alerting + storage pipeline"]
+    S1["1. Gather latest telemetry<br/>from queues"]
+    S2["2. Normalize into a<br/>log_data document"]
+    S3["3. Detect anomalies<br/>(rules)"]
+    S4["4. Persist logs + alerts"]
+    S5["5. Offline sync worker"]
   end
 
   S1 --> S2
@@ -170,8 +170,8 @@ flowchart LR
   S2 --> S3
   S3 -->|alerts[]| S4
 
-  Mongo[(MongoDB:\nlogs / alerts / device_info)] <-->|insert_one / insert_many| S4
-  SQLite[(SQLite:\nlocal_storage.db)] <-->|store_locally| S4
+  Mongo["(MongoDB:<br/>logs / alerts / device_info)"] <-->|insert_one / insert_many| S4
+  SQLite["(SQLite:<br/>local_storage.db)"] <-->|store_locally| S4
   SQLite -->|read unsent rows| S5
   S5 -->|insert_many + clear| Mongo
 ```
